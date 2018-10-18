@@ -30,8 +30,10 @@ $ git clone https://github.com/bifeldy/PTI-TugasAkhir.git
 
 ### Aplikasi Yang Saya Pakai
 
-* Text Editor - [Ms. Visual Studio Code](https://visualstudio.microsoft.com/downloads/) - *Insider Edition*
-* Browser - [Google Chrome](https://www.google.com/chrome/)
+* Text Editor - [Ms. Visual Studio Code](https://visualstudio.microsoft.com/downloads) - *Insider Edition*
+* Browser - [Ms. Edge](https://www.microsoft.com/en-us/download/details.aspx?id=48126)
+* Browser - [Google Chrome](https://www.google.com/chrome)
+* Browser - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/download)
 
 <br />
 
