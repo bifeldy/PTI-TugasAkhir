@@ -31,7 +31,7 @@ $ git clone https://github.com/bifeldy/PTI-TugasAkhir.git
 ### Aplikasi Yang Saya Pakai
 
 * Text Editor - [Ms. Visual Studio Code](https://visualstudio.microsoft.com/downloads/) - *Insider Edition*
-* Browser - [Google Chrome](https://visualstudio.microsoft.com/downloads/) - *Insider Edition*
+* Browser - [Google Chrome](https://www.google.com/chrome/)
 
 <br />
 
