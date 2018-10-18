@@ -47,4 +47,4 @@ $ git clone https://github.com/bifeldy/PTI-TugasAkhir.git
 
 ## Lisensi
 
-Proyek ini berada di bawah Lisensi MIT - Harap melihat [LICENSE](LICENSE) untuk informasi tingkat lanjut.
+Proyek ini berada di bawah Lisensi GNU Lesser General Public License v3.0 - Harap melihat [LICENSE](LICENSE) untuk informasi tingkat lanjut.
