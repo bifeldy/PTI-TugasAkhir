@@ -39,6 +39,7 @@ $ git clone https://github.com/bifeldy/PTI-TugasAkhir.git
 
 * [**Steven Reinhart**](https://www.FaceBook.com/Steven.Kam.73)
 * [**Basilius Bias Astho Christyono**](https://www.FaceBook.com/Bifeldy)
+* [**Malvin Joostensz**](https://www.FaceBook.com/Malvin.Joostensz.7)
 * [**Reddy Kusuma Jaya**](https://www.FaceBook.com/Reddy.KusumaJaya)
 
 <br />
