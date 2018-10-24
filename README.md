@@ -1,11 +1,11 @@
-# ![logo](Logo.ico) *PTI-TugasAkhir | Web. Forum*
+# ![logo](Bifeldy\Logo.ico) *PTI-TugasAkhir | Web. Forum*
 
 > Sebuah website yang berbentuk forum dibuat sebagai tugas akhir mata kuliah 'Pengantar Teknologi Internet' <br />
 > Mata Kuliah Ini Bersifat Front-End Dan Hanya Diperbolehkan Pure HTML+CSS+JS (>_<")
 
 <br />
 
-![](Illyasviel-von-Einzbern.png)
+![](Bifeldy\Illyasviel-von-Einzbern.png)
 
 ----
 
