@@ -1,0 +1,969 @@
+/* 
+    CSS Untuk Keseluruhan Halaman Website
+    -- Basilius Bias Astho Christyono
+    -- bias.astho@gmail.com
+*/
+
+/* Browser Settings */
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #20ff6b;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #fbce78;
+}
+
+/*******************************************************************************************************/
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+
+    .bifeldy-title {
+        margin: 20px;
+        margin-top: 65px;
+    }
+    
+    /* Notification */
+    
+    .notification {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    /* Search Box */
+    
+    .bifeldy-search-container {
+        margin-top: 10px;
+        padding: 6px 16px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        display: block;
+    }
+    
+    .bifeldy-search-container input[type=text] {
+        width: calc(100% - 30.58px);
+    }
+    
+    /* Navbar */
+    
+    .bifeldy-navbar {
+        height: 0;
+        width: 100%;
+        background-position-y: calc(100% - 85px);
+        background-size: 50%;
+    }
+    
+    .bifeldy-navbar a:last-child {
+        margin-bottom: 111px;
+    }
+    
+    .bifeldy-navbar .banner {
+        width: 100%;
+    }
+    
+    .bifeldy-navbar .visibleMenu {
+        display: inline-block;
+    }
+
+}
+
+/* Desktop */
+
+@media screen and (min-width: 768px) {
+
+    .bifeldy {
+        margin-left: 58px;
+    }
+    
+    /* Website Title */
+    
+    .bifeldy-title {
+        margin-left: 100px;
+        margin-top: 75px;
+    }
+    
+    /* Navbar Atas */
+    
+    .bifeldy-logo {
+        margin-left: -2px;
+    }
+
+    .bifeldy-logo > b {
+        margin-left: 5px;
+    }
+    
+    .bifeldy-search-container {
+        float: right;
+    }
+    
+    /* Notification */
+    
+    .notification {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    /* Navbar */
+    
+    .bifeldy-navbar {
+        height: 100%;
+        width: 58px;
+        top: 0;
+        background-position-y: calc(100% - 35px);
+        background-size: 50%;
+    }
+    
+    .bifeldy-navbar:hover {
+        width: 250px;
+        transition: 0.25s;
+    }
+    
+    .bifeldy-navbar a:last-child {
+        margin-bottom: 35px;
+    }
+    
+    .bifeldy-navbar .banner {
+        width: 250px;
+    }
+    
+    .bifeldy-navbar .visibleMenu {
+        display: none;
+    }
+
+}
+
+/* Font Class */
+
+.Roboto {
+    font-family: 'Roboto';
+}
+
+.Nunito {
+    font-family: 'Nunito';
+}
+
+.CormorantGaramond {
+    font-family: 'Cormorant Garamond';
+}
+
+.IndieFlower {
+    font-family: 'Indie Flower';
+}
+
+.NanumPenScript {
+    font-family: 'Nanum Pen Script';
+}
+
+.ShadowsIntoLight {
+    font-family: 'Shadows Into Light Two';
+}
+
+/* HR */
+
+hr.style1{
+    border-top: 1px solid #8c8b8b;
+}
+
+hr.style2 {
+    border-top: 3px double #8c8b8b;
+}
+
+hr.style3 {
+    border-top: 1px dashed #8c8b8b;
+}
+
+hr.style4 {
+    border-top: 1px dotted #8c8b8b;
+}
+
+hr.style5 {
+    background-color: #fff;
+    border-top: 2px dashed #8c8b8b;
+}
+
+hr.style6 {
+    background-color: #fff;
+    border-top: 2px dotted #8c8b8b;
+}
+
+hr.style7 {
+    border-top: 1px solid #8c8b8b;
+    border-bottom: 1px solid #fff;
+}
+
+hr.style8 {
+    border-top: 1px solid #8c8b8b;
+    border-bottom: 1px solid #fff;
+}
+hr.style8:after {
+    content: '';
+    display: block;
+    margin-top: 2px;
+    border-top: 1px solid #8c8b8b;
+    border-bottom: 1px solid #fff;
+}
+
+hr.style9 {
+    border-top: 1px dashed #8c8b8b;
+    border-bottom: 1px dashed #fff;
+}
+
+hr.style10 {
+    border-top: 1px dotted #8c8b8b;
+    border-bottom: 1px dotted #fff;
+}
+
+hr.style11 {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+hr.style12 { 
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+hr.style13 {
+    border-top: 4px double #8c8b8b;
+    text-align: center;
+}
+
+hr.style13:after {
+    content: '\002665';
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    padding: 0 10px;
+    background: #f0f0f0;
+    color: #8c8b8b;
+    font-size: 18px;
+}
+
+hr.style14 { 
+border-top: 1px dashed #8c8b8b; 
+}
+
+hr.style14:after { 
+    content: '\002702'; 
+    display: inline-block; 
+    position: relative; 
+    top: -12px; 
+    left: 40px; 
+    padding: 0 3px; 
+    background: #f0f0f0; 
+    color: #8c8b8b; 
+    font-size: 18px; 
+}
+
+hr.style15 {
+    border-top: 1px solid #8c8b8b;
+    text-align: center;
+}
+
+hr.style15:after {
+    content: '§';
+    display: inline-block;
+    position: relative;
+    top: -14px;
+    padding: 0 10px;
+    background: #f0f0f0;
+    color: #8c8b8b;
+    font-size: 18px;
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+hr.style16 { 
+    height: 30px; 
+    border-style: solid; 
+    border-color: #8c8b8b; 
+    border-width: 1px 0 0 0; 
+    border-radius: 20px; 
+} 
+
+hr.style16:before { 
+    display: block; 
+    content: ""; 
+    height: 30px; 
+    margin-top: -31px; 
+    border-style: solid; 
+    border-color: #8c8b8b; 
+    border-width: 0 0 1px 0; 
+    border-radius: 20px; 
+}
+
+/* Default HTML Tags */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+    color: black;
+    /* background: url('../img/bg-img/bg-atas.gif') fixed repeat center -60px, url('../img/bg-img/bg-bawah.png') fixed center repeat; */
+    font-family: "ヒラギノ角ゴ Pro W3",
+                 "Hiragino Kaku Gothic Pro",
+                 "メイリオ",
+                 "Meiryo",
+                 "Osaka",
+                 "ＭＳ Ｐゴシック",
+                 "MS PGothic",
+                 sans-serif;
+    opacity: 0.9;
+}
+
+main {
+    margin-bottom: 1.5rem;
+}
+
+.navbar {
+    z-index: 1;
+}
+
+img {
+    vertical-align: middle;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: #2e51a2;
+    z-index: 3;
+    width: 100%;
+}
+
+.active {
+    background-color: #18c953;
+}
+
+/* Search Box */
+
+.bifeldy-search-container input[type=text] {
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: none;
+    background-color: #20ff6b;
+}
+
+.bifeldy-search-container button {
+    float: right;
+    background: #d2476e;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.bifeldy-search-container button:hover {
+    background: #fbce78;
+}
+
+#nav-open-close {
+    float: right;
+    font-size: 150%;
+}
+
+/* Menu Navigasi */
+
+.bifeldy-navbar {
+    position: fixed;
+    left: 0px;
+    transition: 0.25s;
+    background-color: rgb(102, 23, 0);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 50%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 2;
+}
+
+.bifeldy-navbar::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.bifeldy-navbar .banner {
+    float: left;
+    /* background: url('../img/sidebar/banner.png'); */
+    background-repeat: no-repeat;
+    height: 150px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Strait', sans-serif;
+    background-size: cover;
+}
+
+.bifeldy-navbar a {
+    padding: 6px 16px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+}
+
+.bifeldy-navbar .visibleMenu {
+    padding-left: 5px;
+}
+
+.bifeldy-navbar a:hover {
+    background-color: rgb(200, 157, 122);
+}
+
+.bifeldy-navbar .search-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+
+/* Notification Alert */
+
+.notification {
+    width: 100%;
+}
+
+.alert {
+    margin: 0;
+    transition: opacity 0.75s;
+}
+
+.close-button {
+    margin-left: 15px;
+    color: black;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 25px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+.timeStamp {
+    margin-left: 15px;
+    color: black;
+    font-weight: bold;
+    float: right;
+}
+
+/* Bootstrap Edit Konten */
+
+.jumbotron {
+    min-height: 268px;
+    /* background: url('../img/banner-logo/banner-logo-atas.png') right no-repeat,
+                url('../img/banner-logo/banner-logo-bawah.jpg') right repeat-x; */
+    background-position: right;
+    margin-top: 58px;
+    margin-bottom: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.widget {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#announcement .widget-topic img{
+    width: 100px;
+}
+
+#latest-post .widget-topic img{
+    width: 125px;
+}
+
+/* Banner gambar */
+
+.gambar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    transition: opacity 0.75s;
+}
+
+.gambar img {
+    width: 100%;
+    height: auto;
+}
+
+.gambar .close-button {
+    margin-left: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 25px;
+    cursor: pointer;
+    transition: 0.25s;
+    text-align: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.gambar .close-button:hover {
+    color: red;
+}
+
+/* Isi Kontent Kiri */
+
+.widget-bg {
+}
+
+.widget-header {
+    border-color: #ff9800;
+    border-style: solid;
+    border-width: 0 0 1px;
+    color: #008022;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    padding: 3px 0;
+}
+
+.widget-content{
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.widget-topic {
+    border-color: green;
+    border-style: solid;
+    border-width: 0 0 1px;
+    padding: 3px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.widget-more {
+    float: right;
+}
+
+.widget-topic a,
+.widget-more a,
+.widget-topic a:visited,
+.widget-more a:visited {
+    color: #1d439b;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.widget-topic a:hover,
+.widget-more a:hover {
+    color: #ff9800;
+}
+
+.widget-creator {
+    color: #661700;
+    font-size: 14px;
+}
+
+/* Anime List */
+
+.animelist{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.seasonal-anime-list {
+    margin-top: 25px;
+}
+
+.clearfix {
+    display: block;
+    text-align: center;
+}
+
+.seasonal-anime-list .seasonal-anime .title .title-text a,
+.seasonal-anime-list .seasonal-anime .title .title-text a:visited,
+.seasonal-anime-list .seasonal-anime .prodsrc .producer a,
+.seasonal-anime-list .seasonal-anime .prodsrc .producer a:visited 
+.seasonal-anime-list .seasonal-anime .prodsrc .eps a,
+.seasonal-anime-list .seasonal-anime .prodsrc .eps a:visited {
+    color: #1d439b;
+    text-decoration: none;
+}
+
+.seasonal-anime-list .seasonal-anime .title .title-text a:hover,
+.seasonal-anime-list .seasonal-anime .prodsrc .producer a:hover,
+.seasonal-anime-list .seasonal-anime .prodsrc .eps a:hover {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+    /* Judul */
+
+    .seasonal-anime-list .seasonal-anime {
+        background-color: rgb(245, 245, 245);
+        border: gainsboro 1px solid;
+        display: inline-block;
+        margin-bottom: 5px;
+        margin-left: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .seasonal-anime-list .seasonal-anime .title {
+        margin: 0;
+        overflow: hidden;
+        text-align: center;
+        vertical-align: middle;
+        width: 334px;   
+    }
+
+    .seasonal-anime-list .seasonal-anime .title .title-text {
+        font-weight: 700;
+        line-height: 1.1em;
+        padding: 4px 4px;
+        margin: 0;
+    }
+
+    /* Produksi Episode */
+
+    .seasonal-anime-list .seasonal-anime .prodsrc {
+        background-color: rgb(234, 234, 234);
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        padding: 3px 0;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .seasonal-anime-list .seasonal-anime .prodsrc .eps {
+        -webkit-box-flex: 1;
+        box-flex: 1;
+        color: #7f7f7f;
+        display: inline-block;
+        -ms-flex: 1;
+        flex: 1;
+        font-size: 13px;
+        margin: 0 8px;
+        overflow: hidden;
+        padding: 0;
+        text-align: right;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .seasonal-anime-list .seasonal-anime .prodsrc .source {
+        border-left: 1px solid #d8d8d8;
+        -webkit-box-flex: 1;
+        box-flex: 1;
+        color: #7f7f7f;
+        display: inline-block;
+        -ms-flex: 1;
+        flex: 1;
+        font-size: 13px;
+        padding: 0;
+        padding-left: 8px;
+        text-align: left;
+    }
+
+    /* Genre */
+
+    .seasonal-anime-list .seasonal-anime .genres {
+        background-color: rgb(210, 210, 210);
+        border-bottom: #f0f0f0 1px solid;
+        display: block;
+        list-style: none;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+        -webkit-transition-property: all;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+        -webkit-transition-timing-function: ease-in-out;
+        width: 100%;
+    }
+
+    .seasonal-anime-list .seasonal-anime .genres .genres-inner {
+        width: 100%;
+    }
+
+    .seasonal-anime-list .seasonal-anime .genres .genre {
+        background-color: #fff;
+        border: #e1e7f7 1px solid;
+        border-radius: 5px;
+        color: #787878;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 9px;
+        line-height: 1.0em;
+        margin-right: 1px;
+        padding: 1px 4px;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+    }
+
+    .seasonal-anime-list .seasonal-anime .genres .genre a {
+        color: #787878;
+        text-decoration: none;
+    }
+
+    /* Images */
+
+    .seasonal-anime-list .seasonal-anime .image {
+        background-color: #f9f9f9;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        float: left;
+        height: 100%;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimizeQuality;
+        -ms-interpolation-mode: bicubic;
+        position: relative;
+    }
+
+    /* Synopsis */
+
+    .seasonal-anime-list .seasonal-anime .synopsis {
+        display: inline-block;
+        font-size: 12px;
+        height: 230px;
+        line-height: 1.4em;
+        overflow: hidden;
+        width: 160px;
+        padding-left: 3px;
+        margin-top: 5px;
+        text-align: left;
+    }
+
+    .preline {
+        white-space: pre-line;
+    }
+
+    .seasonal-anime-list .seasonal-anime .synopsis .licensors.on {
+        display: block;
+    }
+
+    .seasonal-anime-list .seasonal-anime .synopsis .licensors {
+        color: #787878;
+        display: none;
+        margin-bottom: 4px;
+        margin-top: 8px;
+    }
+
+    .fw-b {
+        font-weight: 700!important;
+    }
+
+    /* Information */
+
+    .seasonal-anime-list .seasonal-anime .synopsis:hover {
+        overflow: auto;
+    }
+
+    .seasonal-anime-list .seasonal-anime .information {
+        border-top: 1px solid #ededed;
+        bottom: 0;
+        display: table;
+        height: 20px;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .seasonal-anime-list .seasonal-anime .information .info {
+        background-color: #f9f9f9;
+        color: #585858;
+        display: table-cell;
+        font-size: 10px;
+        font-weight: 700;
+        height: 20px;
+        line-height: 1.0em;
+        padding-top: 4px;
+        text-align: center;
+        width: 167px;
+    }
+
+    .seasonal-anime-list .seasonal-anime .information .scormem {
+        background-color: #f9f9f9;
+        color: #585858;
+        display: table-cell;
+        font-size: 12px;
+        font-weight: 700;
+        height: 21px;
+        line-height: 1.0em;
+        overflow: hidden;
+        padding: 0;
+        padding-top: 4px;
+        width: 166px;
+    }
+
+    .seasonal-anime-list .seasonal-anime .information .scormem .member {
+        display: inline-block;
+        margin-right: 8px;
+        padding-left: 12px;
+        position: relative;
+    }
+
+    .fl-r {
+        float: right!important;
+    }
+
+    .seasonal-anime-list .seasonal-anime .information .scormem .score {
+        display: inline-block;
+        margin-left: 6px;
+        margin-right: 8px;
+        padding-left: 12px;
+        position: relative;
+    }
+    
+/* Form Login */
+
+#UserID, #PassID, select {
+    width:100%;
+    border:1.4px solid yellow;
+    border-radius:4px;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+}
+  
+#UserID:focus, 
+#PassID:focus,
+select:focus {
+    border-color: greenyellow;
+    box-shadow: 0 0 8px 0 greenyellow;
+}
+  
+.inputWithIcon #UserID,
+.inputWithIcon #PassID,
+.inputWithIcon select {
+    padding-left:40px;
+}
+  
+.inputWithIcon{
+    position:relative;
+}
+  
+.inputWithIcon i{
+    position:absolute;
+    left:0;
+    top:0px;
+    padding:10px 10px;
+    color:blueviolet;
+    transition:.3s;
+}
+  
+.inputWithIcon #UserID:focus + i,
+.inputWithIcon #PassID:focus + i ,
+.inputWithIcon select:focus + i {
+    color: greenyellow;
+}
+  
+.inputWithIcon.inputIconBg i{
+    background-color:cyan;
+    color:blueviolet;
+    padding:13.5px 6px;
+    border-radius:4px 0 0 4px;
+    width: 35px;
+}
+  
+.inputWithIcon.inputIconBg #UserID:focus + i,
+.inputWithIcon.inputIconBg #PassID:focus + i,
+.inputWithIcon.inputIconBg select:focus + i{
+    color:blueviolet;
+    background-color: greenyellow;
+}
+
+#btnLogin {
+    display: inline-block;
+    background-color: yellow;
+    color: red;
+    padding: 14px 20px;
+    margin: 8px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0s; /** 0.5s Kelamaan Bro */
+}
+
+#btnRegist {
+    display: inline-block;
+    background-color: #20ff6b;
+    color: red;
+    padding: 14px 20px;
+    margin: 8px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0s; /** 0.5s Kelamaan Bro */
+}
+
+#btnLogin:hover, #btnRegist:hover {
+    background-color: blue;
+    color: yellow;
+}
+
+#btnLogin:active, #btnRegist:active {
+    background-color: red;
+    color: cyan;
+}
+
+/* SpaceIt */
+
+.spaceit {
+    margin: 3px 0;
+    padding: 3px 0;
+}
+
+/* Multi Carousel */
+
+.carousel {
+}
+
+.carousel-cell {
+    width: 175px;
+    height: 210px;
+    margin-right: 10px;
+    border-radius: 5px;
+    counter-increment: gallery-cell;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* cell number */
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}

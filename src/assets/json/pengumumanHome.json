@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "img": ["/assets/img/pengumuman/MainTenis.png", "Maintenis"],
+        "title": "Website Dalam Perbaikan!",
+        "content": "Kami sangat senang mengumumkan bahwa situs ini telah dirilis.",
+        "calendar": ["15/09/2012", "02:18"],
+        "comment": 24,
+        "tags": ["Warning"],
+        "user": ["bifeldy", "Bias A."]
+    },
+    {
+        "id": 2,
+        "img": ["/assets/img/pengumuman/Presentasi.svg", "Presentasi"],
+        "title": "Presentasi 02/10/2018!",
+        "content": "Penambahan fitur baru dan memperbaiki Bugs.",
+        "calendar": ["28/09/2018", "18:23"],
+        "comment": 48,
+        "tags": ["Alert"],
+        "user": ["bifeldy", "Bias A."]
+    },
+    {
+        "id": 3,
+        "img": ["/assets/img/pengumuman/UI-UX.svg", "UI & UX!"],
+        "title": "UI & UX Improved!",
+        "content": "Framework `Angular v7` + `Bootstrap v4` + `jQuery v3` Library.",
+        "calendar": ["11/11/2018", "22:53"],
+        "comment": 17,
+        "tags": ["Update"],
+        "user": ["bifeldy", "Bias A."]
+    }
+]
