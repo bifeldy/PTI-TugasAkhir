@@ -16,7 +16,7 @@
 
 ## Tentang Tugas
 
-Forum yang dibuat untuk diskusi misalnya mata kuliah atau sekedar chat untuk tugas mingguan.
+Tempat Sharing File-File Gitu Deh ...
 
 <br />
 
