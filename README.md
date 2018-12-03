@@ -28,9 +28,6 @@ $ cd PTI-TugasAkhir
 $ npm install
 $ ng serve --open
 ```
-```
-    Kemudian Buka http://localhost:4200/
-```
 
 <br />
 
