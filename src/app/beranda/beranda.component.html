@@ -140,6 +140,76 @@
                                 'background-size': '150px 225px'
                             }">
                         </a>
+                        <a (dblclick)="openDetail(rilisanData.results[10].id)" class="carousel-cell"
+                            [ngStyle]="{
+                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[10].poster_path + ')',
+                                'background-position': 'center center',
+                                'background-size': '150px 225px'
+                            }">
+                        </a>
+                        <a (dblclick)="openDetail(rilisanData.results[11].id)" class="carousel-cell"
+                            [ngStyle]="{
+                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[11].poster_path + ')',
+                                'background-position': 'center center',
+                                'background-size': '150px 225px'
+                            }">
+                        </a>
+                        <a (dblclick)="openDetail(rilisanData.results[12].id)" class="carousel-cell"
+                            [ngStyle]="{
+                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[12].poster_path + ')',
+                                'background-position': 'center center',
+                                'background-size': '150px 225px'
+                            }">
+                        </a>
+                        <a (dblclick)="openDetail(rilisanData.results[13].id)" class="carousel-cell"
+                            [ngStyle]="{
+                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[13].poster_path + ')',
+                                'background-position': 'center center',
+                                'background-size': '150px 225px'
+                            }">
+                        </a>
+                        <a (dblclick)="openDetail(rilisanData.results[14].id)" class="carousel-cell"
+                            [ngStyle]="{
+                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[14].poster_path + ')',
+                                'background-position': 'center center',
+                                'background-size': '150px 225px'
+                            }">
+                        </a>
+                        <a (dblclick)="openDetail(rilisanData.results[15].id)" class="carousel-cell"
+                            [ngStyle]="{
+                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[15].poster_path + ')',
+                                'background-position': 'center center',
+                                'background-size': '150px 225px'
+                            }">
+                        </a>
+                        <a (dblclick)="openDetail(rilisanData.results[16].id)" class="carousel-cell"
+                            [ngStyle]="{
+                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[16].poster_path + ')',
+                                'background-position': 'center center',
+                                'background-size': '150px 225px'
+                            }">
+                        </a>
+                        <a (dblclick)="openDetail(rilisanData.results[17].id)" class="carousel-cell"
+                            [ngStyle]="{
+                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[17].poster_path + ')',
+                                'background-position': 'center center',
+                                'background-size': '150px 225px'
+                            }">
+                        </a>
+                        <a (dblclick)="openDetail(rilisanData.results[18].id)" class="carousel-cell"
+                            [ngStyle]="{
+                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[18].poster_path + ')',
+                                'background-position': 'center center',
+                                'background-size': '150px 225px'
+                            }">
+                        </a>
+                        <a (dblclick)="openDetail(rilisanData.results[19].id)" class="carousel-cell"
+                            [ngStyle]="{
+                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[19].poster_path + ')',
+                                'background-position': 'center center',
+                                'background-size': '150px 225px'
+                            }">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -199,23 +269,25 @@
                         <li class="media widget-topic" *ngFor="let data of populerData.results | slice: 0:5;">
                             <img class="mr-2" src="https://image.tmdb.org/t/p/w58_and_h87_bestv2{{data.poster_path}}" alt="Bootstrap" width="50"/>
                             <div class="media-body">
-                                <a (click)="openDetail(data.id)">
+                                <a routerLink="/detail/{{data.id}}">
                                     <strong>{{ data.title | slice: 0:25 }}...</strong>
                                 </a>
                                 <br />
                                 {{ data.overview | slice: 0:30 }}...
                                 <br />
-                                <span class="score">
-                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                    {{ data.vote_average }}
-                                </span>
-                                <span class="member fl-r">
-                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                    {{ data.vote_count }}
-                                </span>
-                                <span class="remain-time">
-                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                    {{ data.release_date }}
+                                <span class="widget-creator">
+                                    <span class="score">
+                                        <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                        {{ data.vote_average }}
+                                    </span>
+                                    <span class="member fl-r">
+                                        <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                        {{ data.vote_count }}
+                                    </span>
+                                    <span class="remain-time">
+                                        <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                        {{ data.release_date }}
+                                    </span>
                                 </span>
                             </div>
                         </li>

@@ -50,8 +50,12 @@
                                     Whops~ Belum Ada Genre.
                             </ng-template>
                             <ng-template #adaGenre>
-                                <span class="genre" *ngFor="let genre of data.genre_ids;">
-                                    {{ genre }}
+                                <span *ngFor="let genreId of data.genre_ids;">
+                                    <span *ngFor="let genreName of genreData.genres;">
+                                        <span class="genre" *ngIf="genreId == genreName.id">
+                                            {{ genreName.name }}
+                                        </span>
+                                    </span>
                                 </span>
                             </ng-template>
                         </div>

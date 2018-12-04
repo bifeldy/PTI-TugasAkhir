@@ -3,7 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { IPengumumanHome, IDiskusiHome, IRilisanHome, IPopularHome } from './pelayan';
+import { 
+  IPengumumanHome, 
+  IDiskusiHome, 
+  IRilisanHome, 
+  IPopularHome, 
+  IRilisanDetail,
+  IGenres
+ } from './pelayan';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +27,8 @@ export class PelayanService {
   private diskusiHome: string = "/assets/json/diskusi.json";
   private rilisanHome: string = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + this.TMDbAPIKey + "&language=en-US&page=";
   private popularHome: string = "https://api.themoviedb.org/3/movie/popular?api_key=" + this.TMDbAPIKey + "&language=en-US&page=";
+  private rilisanDetail: string = "https://api.themoviedb.org/3/movie/";
+  private genres = "https://api.themoviedb.org/3/genre/movie/list?api_key=" + this.TMDbAPIKey;
 
   constructor(private http: HttpClient, private _router: Router, private _route: ActivatedRoute) { }
 
@@ -37,6 +46,14 @@ export class PelayanService {
 
   getRilisan(page: number): Observable<IRilisanHome[]> {
     return this.http.get<IRilisanHome[]>(this.rilisanHome + page);
+  }
+  
+  getRilisanDetail(id: number): Observable<IRilisanDetail[]> {
+    return this.http.get<IRilisanDetail[]>(this.rilisanDetail + id + '?api_key=' + this.TMDbAPIKey);
+  }
+
+  getGenres(): Observable<IGenres[]> {
+    return this.http.get<IGenres[]>(this.genres);
   }
 
   getPopuler(page: number): Observable<IPopularHome[]> {

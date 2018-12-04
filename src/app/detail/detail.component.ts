@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { PelayanService } from '../_pelayan/pelayan.service';
 
@@ -9,10 +10,35 @@ import { PelayanService } from '../_pelayan/pelayan.service';
 })
 export class DetailComponent implements OnInit {
 
-  constructor(private _pelayanService: PelayanService) { }
+  public websiteData = {};
+  public dataId: number;
+  public detailData = {};
+
+  constructor(private _pelayanService: PelayanService, private _router: Router, private _route: ActivatedRoute) { }
 
   ngOnInit() {
     // Sekali Ini Tidak Listening URL
+    this.dataId = parseInt(this._route.snapshot.paramMap.get('id'));
+    if(this.dataId <= 0){
+      this.dataId = 1;
+      this._router.navigate(['../', this.dataId], {
+        relativeTo: this._route
+      });
+    }
+    // Ambil Website Data
+    this.websiteData = this._pelayanService.getWesiteData();
+    this._pelayanService.getRilisanDetail(this.dataId)
+        .subscribe(
+          data => {
+            if(data !== null && data !== undefined) {
+              if(data.length <= 0) return;
+              this.detailData = data;
+            }
+          },
+          err => {
+            console.log(err.message);
+          }
+        );
     this._pelayanService.loadScriptTEXT(`
       $('.carousel').flickity({
         "contain": true,

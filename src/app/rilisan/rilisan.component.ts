@@ -10,9 +10,10 @@ import { PelayanService } from '../_pelayan/pelayan.service';
 })
 export class RilisanComponent implements OnInit {
 
-  public pageNumber: number;
   public websiteData = {};
+  public pageNumber: number;
   public rilisanData = {};
+  public genreData = [];
 
   constructor(private _pelayanService: PelayanService, private _router: Router, private _route: ActivatedRoute) { }
 
@@ -36,6 +37,18 @@ export class RilisanComponent implements OnInit {
               if(data !== null && data !== undefined) {
                 if(data.length <= 0) return;
                 this.rilisanData = data;
+              }
+            },
+            err => {
+              console.log(err.message);
+            }
+          );
+      this._pelayanService.getGenres()
+          .subscribe(
+            data => {
+              if(data !== null && data !== undefined) {
+                if(data.length <= 0) return;
+                this.genreData = data;
               }
             },
             err => {
