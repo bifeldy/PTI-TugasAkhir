@@ -27,3 +27,10 @@ export interface IRilisanHome {
     dates: {},
     total_pages: number
 }
+
+export interface IPopularHome {
+    results: [],
+    page: number,
+    total_results: number,
+    total_pages: number
+}

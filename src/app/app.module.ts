@@ -11,6 +11,7 @@ import { MasukComponent } from './masuk/masuk.component';
 import { KesalahanComponent } from './kesalahan/kesalahan.component';
 import { RilisanComponent } from './rilisan/rilisan.component';
 import { PelayanService } from './_pelayan/pelayan.service';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PelayanService } from './_pelayan/pelayan.service';
     BerandaComponent,
     MasukComponent,
     KesalahanComponent,
-    RilisanComponent
+    RilisanComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

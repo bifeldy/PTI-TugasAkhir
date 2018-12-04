@@ -34,7 +34,7 @@
                 <div class="seasonal-anime js-seasonal-anime" *ngFor="let data of rilisanData.results | slice: 0:19;">
                     <div class="title">
                         <p class="title-text">
-                            <a class="link-title" routerLink="/details/{{data.id}}">
+                            <a class="link-title" (click)="openDetail(data.id)">
                                 {{ data.title }}
                             </a>
                         </p>
@@ -45,16 +45,34 @@
                     </div>
                     <div class="genres js-genre">
                         <div class="genres-inner js-genre-inner">
-                            <span class="genre" *ngFor="let genre of data.genre_ids;">{{ genre }}</span>
+                            <span *ngIf="data.genre_ids.length == 0; then tidakAdaGenre; else adaGenre;"></span>
+                            <ng-template #tidakAdaGenre>
+                                    Whops~ Belum Ada Genre.
+                            </ng-template>
+                            <ng-template #adaGenre>
+                                <span class="genre" *ngFor="let genre of data.genre_ids;">
+                                    {{ genre }}
+                                </span>
+                            </ng-template>
                         </div>
                     </div>
                     <div class="image">
-                        <img width="167" height="242" alt="{{ data.title }}" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{data.poster_path}}" />
+                        <img *ngIf="data.poster_path == null || data.poster_path == undefine; then tidakAdaGambar; else adaGambar;" />
+                        <ng-template #tidakAdaGambar>
+                                <img width="167" height="242" alt="{{ data.original_title | slice: 0:20 }}" src="assets/img/404.gif" />
+                        </ng-template>
+                        <ng-template #adaGambar>
+                                <img width="167" height="242" alt="{{ data.original_title | slice: 0:20 }}" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{data.poster_path}}" />
+                        </ng-template>
                     </div>
                     <div class="synopsis js-synopsis" style="width: 160px;">
-                        <span class="preline">
-                            {{ data.overview }}
-                        </span>
+                        <span class="preline" *ngIf="data.overview == null || data.overview == undefine || data.overview == ''; then tidakAdaSinopsis; else adaSinopsis;"></span>
+                        <ng-template #tidakAdaSinopsis>
+                            <span class="preline">Whoa~ Tidak Ada Sinopsis Yang Tersedia.</span>
+                        </ng-template>
+                        <ng-template #adaSinopsis>
+                            <span class="preline">{{ data.overview }}</span>
+                        </ng-template>
                     </div>
                     <div class="information">
                         <div class="info">

@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { IPengumumanHome, IDiskusiHome, IRilisanHome } from './pelayan';
+
+import { IPengumumanHome, IDiskusiHome, IRilisanHome, IPopularHome } from './pelayan';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +19,9 @@ export class PelayanService {
   private pengumumanHome: string = "/assets/json/pengumuman.json";
   private diskusiHome: string = "/assets/json/diskusi.json";
   private rilisanHome: string = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + this.TMDbAPIKey + "&language=en-US&page=";
+  private popularHome: string = "https://api.themoviedb.org/3/movie/popular?api_key=" + this.TMDbAPIKey + "&language=en-US&page=";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private _router: Router, private _route: ActivatedRoute) { }
 
   getWesiteData() {
     return this.websiteData;
@@ -36,8 +39,14 @@ export class PelayanService {
     return this.http.get<IRilisanHome[]>(this.rilisanHome + page);
   }
 
-  getPopulerHome() {
+  getPopuler(page: number): Observable<IPopularHome[]> {
+    return this.http.get<IPopularHome[]>(this.popularHome + page);
+  }
 
+  openDetailPage(id: number){
+    this._router.navigate(['/detail', id], {
+      relativeTo: this._route
+    });
   }
 
   public loadScriptURL(url: string) {

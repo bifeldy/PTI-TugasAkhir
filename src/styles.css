@@ -564,8 +564,10 @@ footer {
 
 .widget-topic a,
 .widget-more a,
+.media-body a,
 .widget-topic a:visited,
-.widget-more a:visited {
+.widget-more a:visited,
+.media-body a:visited {
     color: #1d439b;
     text-decoration: none;
     font-size: 18px;

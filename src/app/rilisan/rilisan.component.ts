@@ -10,7 +10,7 @@ import { PelayanService } from '../_pelayan/pelayan.service';
 })
 export class RilisanComponent implements OnInit {
 
-  public pageNumber;
+  public pageNumber: number;
   public websiteData = {};
   public rilisanData = {};
 
@@ -58,6 +58,10 @@ export class RilisanComponent implements OnInit {
     this._router.navigate(['../', this.pageNumber], {
       relativeTo: this._route
     });
+  }
+
+  openDetail(id: number){
+    this._pelayanService.openDetailPage(id);
   }
 
 }

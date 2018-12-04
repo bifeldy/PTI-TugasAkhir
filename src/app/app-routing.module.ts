@@ -4,6 +4,7 @@ import { BerandaComponent } from './beranda/beranda.component';
 import { MasukComponent } from './masuk/masuk.component';
 import { KesalahanComponent } from './kesalahan/kesalahan.component';
 import { RilisanComponent } from './rilisan/rilisan.component';
+import { DetailComponent } from './detail/detail.component';
 
 const routes: Routes = [
   // Halaman Utama
@@ -13,6 +14,9 @@ const routes: Routes = [
   // Halaman Rilisan
   { path: 'rilisan', redirectTo: 'rilisan/1' },
   { path: 'rilisan/:id', component: RilisanComponent },
+  // Detail Film
+  { path: 'detail', redirectTo: 'rilisan/1' },
+  { path: 'detail/:id', component: DetailComponent },
   // Halaman 404
   { path: 'kesalahan', component: KesalahanComponent },
   // Halaman Yang Tidak Ketemu 404

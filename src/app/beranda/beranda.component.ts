@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+
 import { PelayanService } from '../_pelayan/pelayan.service';
 
 @Component({
@@ -29,6 +30,7 @@ export class BerandaComponent implements OnInit {
     "user": ["admin", "Administrator"]
   }];
   public rilisanData = {};
+  public populerData = {};
 
   constructor(private _pelayanService: PelayanService, private _router: Router, private _route: ActivatedRoute) { }
 
@@ -59,7 +61,7 @@ export class BerandaComponent implements OnInit {
             console.log(err.message);
           }
         );
-    this._pelayanService.getRilisan(Math.floor(Math.random() * 50) + 1  )
+    this._pelayanService.getRilisan(Math.floor(Math.random() * 50) + 1)
         .subscribe(
           data => {
             if(data !== null && data !== undefined) {
@@ -71,20 +73,43 @@ export class BerandaComponent implements OnInit {
             console.log(err.message);
           }
         );
+    this._pelayanService.getPopuler(1)
+        .subscribe(
+          data => {
+            if(data !== null && data !== undefined) {
+              if(data.length <= 0) return;
+              this.populerData = data;
+            }
+          },
+          err => {
+            console.log(err.message);
+          }
+        );
     this._pelayanService.loadScriptTEXT(`
-      $('.main-carousel').flickity({
+      $('.carousel').flickity({
         "contain": true,
         "freeScroll": true,
         "bgLazyLoad": 4,
         "pageDots": false
       });
     `);
+    this._pelayanService.loadScriptTEXT(`
+      var close = document.getElementsByClassName("close-button");
+      for (var i = 0; i < close.length; i++) {
+          close[i].onclick = function(){
+              var div = this.parentElement;
+              div.style.opacity = "0";
+              setTimeout(function(){
+                  div.style.display = "none";
+                  $(div).remove();
+              }, 600);
+          }
+      }
+    `);
   }
 
-  openDetails(id: number){
-    this._router.navigate(['/details', id], {
-      relativeTo: this._route
-    });
+  openDetail(id: number){
+    this._pelayanService.openDetailPage(id);
   }
 
 }
