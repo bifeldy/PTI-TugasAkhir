@@ -1,3 +1,84 @@
-<p>
-  rilisan works!
-</p>
+<!-- Content Row -->
+<div class="container">
+
+    <!-- Left Content -->
+    <div class="animelist col-12">
+
+        <!-- Anime List -->
+        <div class="animelist widget-bg Nunito">
+            <h3 class="widget-header">
+                <span class="widget-more" style="float: right;">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination pagination-sm">
+                            <li class="page-item">
+                                <a class="page-link" (click)="rilisanPreviousPage()" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item disabled">
+                                <a class="page-link">{{ pageNumber }}</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" (click)="rilisanNextPage(rilisanData.total_pages)" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </span>
+                Daftar Rilisan
+            </h3>
+            <div id="animelist" class="seasonal-anime-list clearfix">
+                <div class="seasonal-anime js-seasonal-anime" *ngFor="let data of rilisanData.results | slice: 0:19;">
+                    <div class="title">
+                        <p class="title-text">
+                            <a class="link-title" routerLink="/details/{{data.id}}">
+                                {{ data.title }}
+                            </a>
+                        </p>
+                    </div>
+                    <div class="prodsrc">
+                        <div class="eps">1 Episode</div>
+                        <div class="source">-----</div>
+                    </div>
+                    <div class="genres js-genre">
+                        <div class="genres-inner js-genre-inner">
+                            <span class="genre" *ngFor="let genre of data.genre_ids;">{{ genre }}</span>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img width="167" height="242" alt="{{ data.title }}" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{data.poster_path}}" />
+                    </div>
+                    <div class="synopsis js-synopsis" style="width: 160px;">
+                        <span class="preline">
+                            {{ data.overview }}
+                        </span>
+                    </div>
+                    <div class="information">
+                        <div class="info">
+                            <i class="fa fa-tv" style="margin-left: 5px;"></i> Movie
+                            <span class="remain-time">
+                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                {{ data.release_date }}
+                            </span>
+                        </div>
+                        <div class="scormem">
+                            <span class="member fl-r">
+                                <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                {{ data.vote_count }}
+                            </span>
+                            <span class="score">
+                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                {{ data.vote_average }}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

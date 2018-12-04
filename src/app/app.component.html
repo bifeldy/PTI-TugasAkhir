@@ -3,8 +3,8 @@
 
     <!-- Topnav Menu Atas, Mobile/Tablets -->
     <nav class="navbar fixed-top" style="background-color: #2e51a2;">
-        <a class="navbar-brand bifeldy-logo" href="/" style="color: whitesmoke;">
-            <img src="/favicon.ico" title="Home" alt="Home" />
+        <a class="navbar-brand bifeldy-logo" routerLink="/" style="color: whitesmoke;">
+            <img src="/favicon.ico" title="Home" alt="Home" height="30" />
             <b>{{ ' &nbsp;' + wesiteData.websiteTitle }}</b>
         </a>
         <ul class="nav justify-content-end">
@@ -104,6 +104,9 @@
 
     <!-- Routing Pages -->
     <router-outlet></router-outlet>
+
+    <!-- Clear Area -->
+    <div class="row mt-4"></div>
 
 </main>
 

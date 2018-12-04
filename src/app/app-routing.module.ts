@@ -9,8 +9,11 @@ const routes: Routes = [
   // Halaman Utama
   { path: '', component: BerandaComponent },
   // Halaman Link Lainnya
-  { path: 'masuk', component: MasukComponent },  
-  { path: 'rilisan', component: RilisanComponent },  
+  { path: 'masuk', component: MasukComponent },
+  // Halaman Rilisan
+  { path: 'rilisan', redirectTo: 'rilisan/1' },
+  { path: 'rilisan/:id', component: RilisanComponent },
+  // Halaman 404
   { path: 'kesalahan', component: KesalahanComponent },
   // Halaman Yang Tidak Ketemu 404
   { path: '**', redirectTo: 'kesalahan' }

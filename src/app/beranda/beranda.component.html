@@ -58,7 +58,7 @@
                 </div>
 
                 <!-- Now Playing -->
-                <div class="widget widget-bg mb-3 Roboto">
+                <div class="widget widget-bg mb-4 Roboto">
                     <h3 class="widget-header">
                         <span class="widget-more" style="float: right;">
                             <a routerLink="/rilisan" style="font-weight: normal; font-size: 15px;">
@@ -68,21 +68,78 @@
                         Daftar Rilisan
                     </h3>
                     <div id="rilisanHome" class="widget-content">
-                        <div class="widget-topic">
-                            <div class="carousel" data-flickity='{ "contain": true, "freeScroll": true, "bgLazyLoad": 4, "pageDots": false }'>
-                                <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
-                                Now Playing Movie Title</div>
-                                <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
-                                Now Playing Movie Title</div>
-                                <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
-                                Now Playing Movie Title</div>
-                                <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
-                                Now Playing Movie Title</div>
-                                <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
-                                Now Playing Movie Title</div>
-                                <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
-                                Now Playing Movie Title</div>
-                            </div>
+                        <div class="main-carousel">
+                            <a (dblclick)="openDetails(rilisanData.results[0].id)" class="carousel-cell"
+                                [ngStyle]="{
+                                    'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[0].poster_path + ')',
+                                    'background-position': 'center center',
+                                    'background-size': '150px 225px'
+                                }">
+                                
+                            </a>
+                            <a (dblclick)="openDetails(rilisanData.results[1].id)" class="carousel-cell"
+                                [ngStyle]="{
+                                    'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[1].poster_path + ')',
+                                    'background-position': 'center center',
+                                    'background-size': '150px 225px'
+                                }">
+                            </a>
+                            <a (dblclick)="openDetails(rilisanData.results[2].id)" class="carousel-cell"
+                                [ngStyle]="{
+                                    'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[2].poster_path + ')',
+                                    'background-position': 'center center',
+                                    'background-size': '150px 225px'
+                                }">
+                            </a>
+                            <a (dblclick)="openDetails(rilisanData.results[3].id)" class="carousel-cell"
+                                [ngStyle]="{
+                                    'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[3].poster_path + ')',
+                                    'background-position': 'center center',
+                                    'background-size': '150px 225px'
+                                }">
+                            </a>
+                            <a (dblclick)="openDetails(rilisanData.results[4].id)" class="carousel-cell"
+                                [ngStyle]="{
+                                    'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[4].poster_path + ')',
+                                    'background-position': 'center center',
+                                    'background-size': '150px 225px'
+                                }">
+                            </a>
+                            <a (dblclick)="openDetails(rilisanData.results[5].id)" class="carousel-cell"
+                                [ngStyle]="{
+                                    'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[5].poster_path + ')',
+                                    'background-position': 'center center',
+                                    'background-size': '150px 225px'
+                                }">
+                            </a>
+                            <a (dblclick)="openDetails(rilisanData.results[6].id)" class="carousel-cell"
+                                [ngStyle]="{
+                                    'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[6].poster_path + ')',
+                                    'background-position': 'center center',
+                                    'background-size': '150px 225px'
+                                }">
+                            </a>
+                            <a (dblclick)="openDetails(rilisanData.results[7].id)" class="carousel-cell"
+                                [ngStyle]="{
+                                    'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[7].poster_path + ')',
+                                    'background-position': 'center center',
+                                    'background-size': '150px 225px'
+                                }">
+                            </a>
+                            <a (dblclick)="openDetails(rilisanData.results[8].id)" class="carousel-cell"
+                                [ngStyle]="{
+                                    'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[8].poster_path + ')',
+                                    'background-position': 'center center',
+                                    'background-size': '150px 225px'
+                                }">
+                            </a>
+                            <a (dblclick)="openDetails(rilisanData.results[9].id)" class="carousel-cell"
+                                [ngStyle]="{
+                                    'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[9].poster_path + ')',
+                                    'background-position': 'center center',
+                                    'background-size': '150px 225px'
+                                }">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -169,8 +226,5 @@
 
             </div>
         </div>
-
-        <!-- Clear Area -->
-        <div class="row mt-4"></div>
 
     </div>

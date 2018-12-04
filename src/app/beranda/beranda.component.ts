@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { PelayanService } from '../_pelayan/pelayan.service';
 
 @Component({
@@ -27,15 +28,18 @@ export class BerandaComponent implements OnInit {
     "calendar": ["31/12/1970", "22:53"],
     "user": ["admin", "Administrator"]
   }];
+  public rilisanData = {};
 
-  constructor(private _pelayanService: PelayanService) { }
+  constructor(private _pelayanService: PelayanService, private _router: Router, private _route: ActivatedRoute) { }
 
   ngOnInit() {
+    // Sekali Ini Tidak Listening URL
     this.websiteData = this._pelayanService.getWesiteData();
     this._pelayanService.getPengumumanHome()
         .subscribe(
           data => {
-            if(data.length > 0) {
+            if(data !== null && data !== undefined) {
+              if(data.length <= 0) return;
               this.pengumumanData = data.reverse();
             }
           },
@@ -46,7 +50,8 @@ export class BerandaComponent implements OnInit {
     this._pelayanService.getDiskusiHome()
         .subscribe(
           data => {
-            if(data.length > 0 && data !== null && data !== undefined) {
+            if(data !== null && data !== undefined) {
+              if(data.length <= 0) return;
               this.diskusiData = data.reverse();
             }
           },
@@ -54,6 +59,32 @@ export class BerandaComponent implements OnInit {
             console.log(err.message);
           }
         );
+    this._pelayanService.getRilisan(Math.floor(Math.random() * 50) + 1  )
+        .subscribe(
+          data => {
+            if(data !== null && data !== undefined) {
+              if(data.length <= 0) return;
+              this.rilisanData = data;
+            }
+          },
+          err => {
+            console.log(err.message);
+          }
+        );
+    this._pelayanService.loadScriptTEXT(`
+      $('.main-carousel').flickity({
+        "contain": true,
+        "freeScroll": true,
+        "bgLazyLoad": 4,
+        "pageDots": false
+      });
+    `);
+  }
+
+  openDetails(id: number){
+    this._router.navigate(['/details', id], {
+      relativeTo: this._route
+    });
   }
 
 }
