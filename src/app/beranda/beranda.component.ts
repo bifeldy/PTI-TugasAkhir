@@ -108,8 +108,4 @@ export class BerandaComponent implements OnInit {
     `);
   }
 
-  openDetail(id: number){
-    this._pelayanService.openDetailPage(id);
-  }
-
 }

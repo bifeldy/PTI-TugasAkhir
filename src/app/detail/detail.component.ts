@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { PelayanService } from '../_pelayan/pelayan.service';
 
@@ -33,6 +33,7 @@ export class DetailComponent implements OnInit {
             if(data !== null && data !== undefined) {
               if(data.length <= 0) return;
               this.detailData = data;
+              console.log(this.detailData);
             }
           },
           err => {

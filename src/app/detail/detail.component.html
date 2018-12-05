@@ -35,7 +35,7 @@
                         <br />
                         Duration: {{ detailData.runtime }} min.
                         <br />
-                        Budget: {{ detailData.budget  | currency: 'USD':'symbol-narrow':'1.2' }}
+                        Budget: {{ detailData.budget  | currency: 'USD':'symbol-narrow':'1.2-2' }}
                         <br />
                         Score: {{ detailData.vote_average }} ({{ detailData.vote_count }} ppl)
                         <br />
@@ -59,7 +59,7 @@
                 <div class="widget-content">
                     <ul class="list-unstyled">
                         <li class="media widget-topic" *ngFor="let companyName of detailData.production_companies;">
-                            <img class="mr-2" src="https://image.tmdb.org/t/p/original{{companyName.logo_path}}" alt="{{ companyName.name | slice: 0:5 }}" width="50"/>
+                            <img class="mr-2" src="https://image.tmdb.org/t/p/original{{companyName.logo_path}}" width="50"/>
                             <div class="media-body">
                                 <strong>{{ companyName.name }}</strong>
                                 <br />
@@ -106,16 +106,7 @@
                 </h3>
                 <div class="widget-content">
                     <div class="widget-topic">
-                        <div class="carousel" data-flickity='{ "autoPlay": 5000, "wrapAround": true, "freeScroll": true, "bgLazyLoad": 4, "pageDots": false }'>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
+                        <div class="carousel">
                             <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
                             <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
                             <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
