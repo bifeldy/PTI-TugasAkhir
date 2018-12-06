@@ -40,8 +40,8 @@
                         </p>
                     </div>
                     <div class="prodsrc">
-                        <div class="eps">1 Episode</div>
-                        <div class="source">-----</div>
+                        <div class="eps" title="Jumlah Episode">1 Episode</div>
+                        <div class="source" title="Asal Cerita">-----</div>
                     </div>
                     <div class="genres js-genre">
                         <div class="genres-inner js-genre-inner">
@@ -79,19 +79,20 @@
                         </ng-template>
                     </div>
                     <div class="information">
-                        <div class="info">
-                            <i class="fa fa-tv" style="margin-left: 5px;"></i> Movie
-                            <span class="remain-time">
+                        <div class="info" title="Tipe">
+                            <i class="fa fa-tv" style="margin-left: 5px;"></i>
+                            Movie
+                            <span class="remain-time" title="Tanggal Rilis">
                                 <i class="fa fa-calendar" style="margin-left: 5px;"></i>
                                 {{ data.release_date }}
                             </span>
                         </div>
-                        <div class="scormem">
+                        <div class="scormem" title="Jumlah Voting">
                             <span class="member fl-r">
                                 <i class="fa fa-users" style="margin-left: 5px;"></i>
                                 {{ data.vote_count }}
                             </span>
-                            <span class="score">
+                            <span class="score" title="Skor">
                                 <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
                                 {{ data.vote_average }}
                             </span>

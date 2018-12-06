@@ -1,11 +1,8 @@
 /* Multi Carousel */
 
-.carousel {
-}
-
 .carousel-cell {
     width: 150px;
-    height: 350px;
+    height: 400px;
     margin-right: 10px;
     border-radius: 5px;
     counter-increment: gallery-cell;
