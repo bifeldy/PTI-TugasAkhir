@@ -53,27 +53,7 @@
                 <h3 class="widget-header">
                     Komentar
                 </h3>
-                <div id="komentar" class="widget-content">
-                    <ul class="list-unstyled">
-                        <li class="media widget-topic">
-                            <img class="mr-3" width="85" src="{{pengumumanData.img[0]}}" alt="{{pengumumanData.img[1]}}" />
-                            <div class="media-body">
-                                <span class="widget-creator">
-                                    <i class="fa fa-user-o" title="Penulis">
-                                        <a routerLink="/profile/{{pengumumanData.user[0]}}"> {{pengumumanData.user[1]}}</a>
-                                    </i>
-                                    <br />
-                                    <i class="fa fa-calendar" title="Tanggal Terbit"> {{pengumumanData.calendar[0]}}</i> &nbsp;
-                                    <i class="fa fa-clock-o" title="Waktu Terbit"> {{pengumumanData.calendar[1]}}</i> &nbsp;
-                                </span>
-                                <div class="d-none d-md-block">
-                                    <br />
-                                    {{pengumumanData.content}}
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <disqus [identifier]="'/pengumuman/' + pengumumanData.id"></disqus>
             </div>
 
         </div>

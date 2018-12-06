@@ -203,56 +203,9 @@
             <!-- Review -->
             <div class="widget widget-bg mb-3 CormorantGaramond">
                 <h3 class="widget-header">
-                    <span class="widget-more" style="float: right;">
-                        <a routerLink="/detail/{{detailData.id}}/komentar" style="font-weight: normal; font-size: 15px;">
-                            View More
-                        </a>
-                    </span>
-                    Reviews
+                    Komentar
                 </h3>
-                <div class="widget-content">
-                    <div class="widget-topic">
-                        <div class="borderDark" style="padding: 4px 0;">
-                            <div class="spaceit">
-                                <div class="mb8" style="float: right; text-align: right;">
-                                    <div>Oct 25, 2018</div>
-                                    <div>
-                                        Overall Rating: -
-                                    </div>
-                                </div>
-                                <div style="float: left;">
-                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                        <tbody>
-                                            <tr>
-                                                <td valign="top" width="50" height="50">
-                                                    <div class="picSurround mr-2">
-                                                        <a href="https://myanimelist.net/profile/Pipe">
-                                                            <img src="https://image.tmdb.org/t/p/w64_and_h64_face/zRg1sQbcKBJBkTkkYRtg0F71UFp.jpg" />
-                                                        </a>
-                                                    </div>
-                                                </td>
-                                                <td valign="top">
-                                                    <a href="https://www.themoviedb.org/u/geekr">geekr</a>
-                                                    <div class="lightLink spaceit">
-                                                        <strong>336x</strong>
-                                                        helpful
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="spaceit textReadability word-break pt8 mt8" style="clear: both; border-top: 1px solid lightgray; margin-top: 1rem;">
-                                <span>
-                                    The Harry Potter movies are great but one of the main flaws of the original franchise was the struggle the films had condensing the lengthy novels into movies under three hours. Despite the Fantastic Beasts sequel not being based on a book, it still somehow feels like its stressing to condense a five hundred page book into a smaller narrative.
-                                    The movie runs from scenario to scenario so quickly that it’s hard to remember what all happened in its muddled story. That’s not to say the film is terrible at all, surprisingly. For a movie that has serious pacing pro... 
-                                </span>
-                                <a href="https://www.themoviedb.org/review/5bf42ec6c3a36818a30a7175">Read More!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <disqus [identifier]="'/detail/' + detailData.id"></disqus>
             </div>
         </div>
 

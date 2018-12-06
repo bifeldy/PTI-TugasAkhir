@@ -15,6 +15,7 @@ import { PengumumanComponent } from './pengumuman/pengumuman.component';
 import { PengumumanDetailComponent } from './pengumuman-detail/pengumuman-detail.component';
 import { DiskusiComponent } from './diskusi/diskusi.component';
 import { RilisanDetailComponent } from './rilisan-detail/rilisan-detail.component';
+import { DisqusModule } from "ngx-disqus";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RilisanDetailComponent } from './rilisan-detail/rilisan-detail.componen
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DisqusModule.forRoot('bifeldy')
   ],
   providers: [PelayanService],
   bootstrap: [AppComponent]

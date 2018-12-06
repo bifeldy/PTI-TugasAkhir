@@ -46,7 +46,9 @@
                                 <span class="widget-creator">
                                     <i class="fa fa-calendar" title="Tanggal Terbit"> {{data.calendar[0]}}</i> &nbsp;
                                     <i class="fa fa-clock-o" title="Waktu Terbit"> {{data.calendar[1]}}</i> &nbsp;
-                                    <i class="fa fa-commenting-o" title="Jumlah Komentar"> {{data.comment}}</i> &nbsp;
+                                    <i class="fa fa-commenting-o" title="Jumlah Komentar">
+                                        <a routerLink="/pengumuman/{{data.id}}#disqus_thread"> {{data.comment}}</a>
+                                    </i> &nbsp;
                                     <i class="fa fa-tags" title="Kategori"> 
                                         <a routerLink="/tag/{{tag}}" *ngFor="let tag of data.tags"> {{tag}}</a>
                                     </i> &nbsp;
@@ -639,38 +641,9 @@
             <!-- Latest Post -->
             <div class="widget widget-bg mb-3 Nunito">
                 <h3 class="widget-header">
-                    <span class="widget-more" style="float: right;">
-                        <a routerLink="/diskusi" style="font-weight: normal; font-size: 15px;">
-                            View More
-                        </a>
-                    </span>
-                    Diskusi Terakhir
+                    Jejak Peninggalan
                 </h3>
-                <div id="diskusiHome" class="widget-content">
-                    <ul class="list-unstyled">
-                        <li class="media widget-topic" *ngFor="let data of diskusiData | slice: 0:3;">
-                            <img class="mr-3" width="170" src="{{data.img[0]}}" alt="{{data.img[1]}}" />
-                            <div class="media-body">
-                                <div class="mt-0 mb-1">
-                                    <a routerLink="{{data.url}}">
-                                        <strong>{{data.title}}</strong>
-                                    </a>
-                                </div>
-                                <div class="d-none d-md-block">
-                                    {{data.content | slice: 0:100}}
-                                    <div class="d-none d-md-block" *ngIf="data.content.length >= 100">...</div>
-                                </div>
-                                <span class="widget-creator">
-                                    <i class="fa fa-calendar" title="Tanggal Terbit"> {{data.calendar[0]}}</i> &nbsp;
-                                    <i class="fa fa-clock-o" title="Waktu Terbit"> {{data.calendar[1]}}</i> &nbsp;
-                                    <i class="fa fa-user-o" title="Penulis">
-                                        <a routerLink="/profile/{{data.user[0]}}"> {{data.user[1]}}</a>
-                                    </i> &nbsp;
-                                </span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                <disqus [identifier]="'/'"></disqus>
             </div>
 
         </div>
