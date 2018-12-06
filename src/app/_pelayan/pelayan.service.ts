@@ -44,20 +44,20 @@ export class PelayanService {
     return this.http.get<IDiskusiHome[]>(this.diskusiHome);
   }
 
-  getRilisan(page: number): Observable<IRilisanHome[]> {
-    return this.http.get<IRilisanHome[]>(this.rilisanHome + page);
+  getRilisan(page: number): Observable<IRilisanHome> {
+    return this.http.get<IRilisanHome>(this.rilisanHome + page);
   }
   
-  getRilisanDetail(id: number): Observable<IRilisanDetail[]> {
-    return this.http.get<IRilisanDetail[]>(this.rilisanDetail + id + '?api_key=' + this.TMDbAPIKey);
+  getRilisanDetail(id: number): Observable<IRilisanDetail> {
+    return this.http.get<IRilisanDetail>(this.rilisanDetail + id + '?api_key=' + this.TMDbAPIKey);
   }
 
-  getGenres(): Observable<IGenres[]> {
-    return this.http.get<IGenres[]>(this.genres);
+  getGenres(): Observable<IGenres> {
+    return this.http.get<IGenres>(this.genres);
   }
 
-  getPopuler(page: number): Observable<IPopularHome[]> {
-    return this.http.get<IPopularHome[]>(this.popularHome + page);
+  getPopuler(page: number): Observable<IPopularHome> {
+    return this.http.get<IPopularHome>(this.popularHome + page);
   }
 
   openDetailPage(id: number){

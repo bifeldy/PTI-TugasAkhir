@@ -9,12 +9,15 @@ import { PelayanService } from './_pelayan/pelayan.service';
 
 export class AppComponent {
 
-  public wesiteData = {};
+  public websiteData = {
+    "websiteTitle": "",
+    "sudahLogin": false
+  };
 
   constructor(private _pelayanService: PelayanService) { }
 
   ngOnInit() {
-    this.wesiteData = this._pelayanService.getWesiteData();
+    this.websiteData = this._pelayanService.getWesiteData();
   }
 
   pencarian(query: string){

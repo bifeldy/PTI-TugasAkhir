@@ -10,9 +10,38 @@ import { PelayanService } from '../_pelayan/pelayan.service';
 })
 export class RilisanDetailComponent implements OnInit {
 
-  public websiteData = {};
   public dataId: number;
-  public detailData = {};
+  public websiteData = {
+    "websiteTitle": "Misty Chronexial",
+    "sudahLogin": false
+  };
+  public detailData = {
+    adult: false,
+    backdrop_path: "",
+    belongs_to_collection: "",
+    budget: 0,
+    genres: [],
+    homepage: "",
+    id: 0,
+    imdb_id: 0,
+    original_language: "",
+    original_title: "",
+    overview: "",
+    popularity: 0,
+    poster_path: "",
+    production_companies: [],
+    production_countries: [],
+    release_date: "",
+    revenue: 0,
+    runtime: 0,
+    spoken_languages: "",
+    status: "",
+    tagline: "",
+    title: "",
+    video: false,
+    vote_average: 0,
+    vote_count: 0
+  };
 
   constructor(private _pelayanService: PelayanService, private _router: Router, private _route: ActivatedRoute) { }
 
@@ -31,9 +60,7 @@ export class RilisanDetailComponent implements OnInit {
         .subscribe(
           data => {
             if(data !== null && data !== undefined) {
-              if(data.length <= 0) return;
               this.detailData = data;
-              console.log(this.detailData);
             }
           },
           err => {

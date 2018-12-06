@@ -10,10 +10,36 @@ import { PelayanService } from '../_pelayan/pelayan.service';
 })
 export class RilisanComponent implements OnInit {
 
-  public websiteData = {};
   public pageNumber: number;
-  public rilisanData = {};
-  public genreData = [];
+  public websiteData = {
+    "websiteTitle": "Misty Chronexial",
+    "sudahLogin": false
+  };
+  public rilisanData = {
+    results: [
+      {
+        poster_path: "",
+        adult: false,
+        overview: "",
+        release_date: "",
+        genre_ids: [],
+        id: 0,
+        original_title: "",
+        original_language: "",
+        title: "",
+        backdrop_path: "",
+        popularity: 0,
+        vote_count: 0,
+        video: false,
+        vote_average: 0
+      }
+    ],
+    page: 0,
+    total_results: 0,
+    dates: {},
+    total_pages: 0
+  };
+  public genreData = {};
 
   constructor(private _pelayanService: PelayanService, private _router: Router, private _route: ActivatedRoute) { }
 
@@ -33,7 +59,6 @@ export class RilisanComponent implements OnInit {
           .subscribe(
             data => {
               if(data !== null && data !== undefined) {
-                if(data.length <= 0) return;
                 this.rilisanData = data;
               }
             },
@@ -45,7 +70,6 @@ export class RilisanComponent implements OnInit {
           .subscribe(
             data => {
               if(data !== null && data !== undefined) {
-                if(data.length <= 0) return;
                 this.genreData = data;
               }
             },

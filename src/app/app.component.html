@@ -3,9 +3,9 @@
 
     <!-- Topnav Menu Atas, Mobile/Tablets -->
     <nav class="navbar fixed-top shadow" style="background-color: #2e51a2;">
-        <a class="navbar-brand bifeldy-logo" routerLink="/" style="color: whitesmoke;" title="{{wesiteData.websiteTitle}}">
+        <a class="navbar-brand bifeldy-logo" routerLink="/" style="color: whitesmoke;" title="{{websiteData.websiteTitle}}">
             <img src="/favicon.ico" alt="Home" height="30" />
-            <b>{{ ' &nbsp;' + wesiteData.websiteTitle }}</b>
+            <b>{{ ' &nbsp;' + websiteData.websiteTitle }}</b>
         </a>
         <ul class="nav justify-content-end">
             <li class="nav-item d-md-none">
@@ -40,7 +40,7 @@
             </form>
         </div>
 
-        <a *ngIf="wesiteData.sudahLogin; then sudahLogin; else belumLogin;"></a>
+        <a *ngIf="websiteData.sudahLogin; then sudahLogin; else belumLogin;"></a>
         <ng-template #sudahLogin>
             <a routerLink="/profil" routerLinkActive="bifeldy-active">
                 <i class="fa fa-fw fa-user"></i>
