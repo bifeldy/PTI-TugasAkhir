@@ -26,12 +26,14 @@
                 </h3>
                 <div id="pengumuman" class="widget-content">
                     <div class="media widget-topic">
-                        <img class="mr-3" width="85" src="{{pengumumanData.img[0]}}" alt="{{pengumumanData.img[1]}}" />
                         <div class="media-body">
+                            <img class="mr-3" src="{{pengumumanData.img[0]}}" alt="{{pengumumanData.img[1]}}" style="width: 100%;" />
+                            <br /><br />
+                            {{ pengumumanData.content }}
+                            <br /><br />
                             <span class="widget-creator">
                                 <i class="fa fa-calendar" title="Tanggal Terbit"> {{pengumumanData.calendar[0]}}</i> &nbsp;
                                 <i class="fa fa-clock-o" title="Waktu Terbit"> {{pengumumanData.calendar[1]}}</i> &nbsp;
-                                <i class="fa fa-commenting-o" title="Jumlah Komentar"> {{pengumumanData.comment}}</i> &nbsp;
                                 <i class="fa fa-tags" title="Kategori"> 
                                     <a routerLink="/tag/{{tag}}" *ngFor="let tag of pengumumanData.tags"> {{tag}}</a>
                                 </i> &nbsp;
@@ -39,10 +41,6 @@
                                     <a routerLink="/profile/{{pengumumanData.user[0]}}"> {{pengumumanData.user[1]}}</a>
                                 </i> &nbsp;
                             </span>
-                            <div class="d-none d-md-block">
-                                <br />
-                                {{pengumumanData.content}}
-                            </div>
                         </div>
                     </div>
                 </div>

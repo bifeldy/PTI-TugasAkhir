@@ -28,5 +28,15 @@
         "comment": 17,
         "tags": ["Update"],
         "user": ["bifeldy", "Bias A."]
+    },
+    {
+        "id": 4,
+        "img": ["/assets/img/pengumuman/Code-Review.jpg", "Code Review!"],
+        "title": "Presentasi Teori, FINAL!",
+        "content": "Sabtu, 9 Desember 2018. Sudah Pasti Ada Presentasi. Maafkan Saya Jika Ini Tugas Belum Kelar .. Sedih Aing Teh .. Fitur Login Belom Ada, Halaman About Beloman, Daftar Staff Sama Pemain Di Halaman Detail Juga Belom Ada (Kayaknya Sih Yang Ini Mah Ga Usah Aja Kali Yak ?? Males Ah--) ..  Hadeh .. Terus Seninnya UAS Ga Ada Minggu tenang Laghe~ Tugas Praktek Beloman .. Belajar Mata Kuliah Lainnya Apa Lagi .. Wkwkwkwk~",
+        "calendar": ["07/12/2018", "03:05"],
+        "comment": 28,
+        "tags": ["Fun"],
+        "user": ["bifeldy", "Bias A."]
     }
 ]
