@@ -9,18 +9,6 @@ export interface IPengumuman {
     user: []
 }
 
-export interface IDiskusiHome {
-    id: number,
-    url: string,
-    img: [],
-    title: string,
-    content: string,
-    calendar: [],
-    comment: number,
-    tags: [],
-    user: []
-}
-
 export interface IRilisanHome {
     results: [
         {

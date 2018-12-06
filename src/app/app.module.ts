@@ -13,7 +13,6 @@ import { RilisanComponent } from './rilisan/rilisan.component';
 import { PelayanService } from './_pelayan/pelayan.service';
 import { PengumumanComponent } from './pengumuman/pengumuman.component';
 import { PengumumanDetailComponent } from './pengumuman-detail/pengumuman-detail.component';
-import { DiskusiComponent } from './diskusi/diskusi.component';
 import { RilisanDetailComponent } from './rilisan-detail/rilisan-detail.component';
 import { DisqusModule } from "ngx-disqus";
 
@@ -26,7 +25,6 @@ import { DisqusModule } from "ngx-disqus";
     RilisanComponent,
     PengumumanComponent,
     PengumumanDetailComponent,
-    DiskusiComponent,
     RilisanDetailComponent
   ],
   imports: [

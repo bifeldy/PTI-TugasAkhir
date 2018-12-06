@@ -4,8 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 
 import { 
-  IPengumuman, 
-  IDiskusiHome, 
+  IPengumuman,
   IRilisanHome, 
   IPopularHome, 
   IRilisanDetail,
@@ -25,7 +24,6 @@ export class PelayanService {
   private TMDbAPIKey: string = "2c864ba983acc179387f55e736decaf9";
   private APIReadAccessTokenV4: string = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYzg2NGJhOTgzYWNjMTc5Mzg3ZjU1ZTczNmRlY2FmOSIsInN1YiI6IjViZjRmNjg1YzNhMzY4MThhMzBiOWNkNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fJLY67P3_yC-C1cDvjEttNEYhPVTZf4BraM-lKDP2Vo";
   private pengumumanHome: string = "/assets/json/pengumuman.json";
-  private diskusiHome: string = "/assets/json/diskusi.json";
   private rilisanHome: string = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + this.TMDbAPIKey + "&language=en-US&page=";
   private popularHome: string = "https://api.themoviedb.org/3/movie/popular?api_key=" + this.TMDbAPIKey + "&language=en-US&page=";
   private rilisanDetail: string = "https://api.themoviedb.org/3/movie/";
@@ -40,10 +38,6 @@ export class PelayanService {
 
   getPengumumanHome(): Observable<IPengumuman[]> {
     return this.http.get<IPengumuman[]>(this.pengumumanHome);
-  }
-
-  getDiskusiHome(): Observable<IDiskusiHome[]> {
-    return this.http.get<IDiskusiHome[]>(this.diskusiHome);
   }
 
   getRilisan(page: number): Observable<IRilisanHome> {

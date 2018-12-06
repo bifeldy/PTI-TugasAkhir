@@ -6,7 +6,6 @@ import { KesalahanComponent } from './kesalahan/kesalahan.component';
 import { RilisanComponent } from './rilisan/rilisan.component';
 import { PengumumanComponent } from './pengumuman/pengumuman.component';
 import { PengumumanDetailComponent } from './pengumuman-detail/pengumuman-detail.component';
-import { DiskusiComponent } from './diskusi/diskusi.component';
 import { RilisanDetailComponent } from './rilisan-detail/rilisan-detail.component';
 
 const routes: Routes = [
@@ -20,8 +19,6 @@ const routes: Routes = [
   // Halaman Rilisan
   { path: 'rilisan', redirectTo: 'rilisan/1' },
   { path: 'rilisan/:id', component: RilisanComponent },
-  // Halaman Diskusi
-  { path: 'diskusi', component: DiskusiComponent },
   // Detail Film
   { path: 'detail', redirectTo: 'rilisan/1' },
   { path: 'detail/:id', component: RilisanDetailComponent },
