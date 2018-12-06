@@ -2,7 +2,7 @@
 <header class="CormorantGaramond">
 
     <!-- Topnav Menu Atas, Mobile/Tablets -->
-    <nav class="navbar fixed-top" style="background-color: #2e51a2;">
+    <nav class="navbar fixed-top shadow" style="background-color: #2e51a2;">
         <a class="navbar-brand bifeldy-logo" routerLink="/" style="color: whitesmoke;" title="{{wesiteData.websiteTitle}}">
             <img src="/favicon.ico" alt="Home" height="30" />
             <b>{{ ' &nbsp;' + wesiteData.websiteTitle }}</b>
@@ -42,40 +42,40 @@
 
         <a *ngIf="wesiteData.sudahLogin; then sudahLogin; else belumLogin;"></a>
         <ng-template #sudahLogin>
-            <a routerLink="/profil" routerLinkActive="active">
+            <a routerLink="/profil" routerLinkActive="bifeldy-active">
                 <i class="fa fa-fw fa-user"></i>
                 <div class="visibleMenu"> Profil Saya</div>
             </a>
-            <a routerLink="/keluar" routerLinkActive="active">
+            <a routerLink="/keluar" routerLinkActive="bifeldy-active">
                 <i class="fa fa-fw fa-sign-out"></i>
                 <div class="visibleMenu"> Keluar</div>
             </a>
         </ng-template>
         <ng-template #belumLogin>
-            <a routerLink="/masuk" routerLinkActive="active">
+            <a routerLink="/masuk" routerLinkActive="bifeldy-active">
                 <i class="fa fa-fw fa-sign-in"></i>
                 <div class="visibleMenu"> Masuk</div>
             </a>
-            <a routerLink="/daftar" routerLinkActive="active">
+            <a routerLink="/daftar" routerLinkActive="bifeldy-active">
                 <i class="fa fa-fw fa-user-plus"></i>
                 <div class="visibleMenu"> Daftar</div>
             </a>
         </ng-template>
         <hr class="style1" />
-        <a routerLink="/pengumuman" routerLinkActive="active">
+        <a routerLink="/pengumuman" routerLinkActive="bifeldy-active">
             <i class="fa fa-fw fa-newspaper-o"></i>
             <div class="visibleMenu"> Pengumuman</div>
         </a>
-        <a routerLink="/rilisan" routerLinkActive="active">
+        <a routerLink="/rilisan" routerLinkActive="bifeldy-active">
             <i class="fa fa-fw fa-film"></i>
             <div class="visibleMenu"> Daftar Rilisan</div>
         </a>
-        <a routerLink="/diskusi" routerLinkActive="active">
+        <a routerLink="/diskusi" routerLinkActive="bifeldy-active">
             <i class="fa fa-fw fa-comments-o"></i>
             <div class="visibleMenu"> Diskusi</div>
         </a>
         <hr class="style1" />
-        <a routerLink="/tentang" routerLinkActive="active">
+        <a routerLink="/tentang" routerLinkActive="bifeldy-active">
             <i class="fa fa-fw fa-info-circle"></i>
             <div class="visibleMenu"> Tentang Kami</div>
         </a>

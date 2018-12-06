@@ -4,8 +4,8 @@
 }
 
 .carousel-cell {
-    width: 150px;
-    height: 225px;
+    width: 138px;
+    height: 276px;
     margin-right: 10px;
     border-radius: 5px;
     counter-increment: gallery-cell;

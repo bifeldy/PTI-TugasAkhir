@@ -350,7 +350,7 @@ footer {
     width: 100%;
 }
 
-.active {
+.bifeldy-active {
     background-color: #18c953;
 }
 
@@ -562,10 +562,17 @@ footer {
     float: right;
 }
 
+.widget-creator {
+    color: #661700;
+    font-size: 14px;
+}
+
 .widget-topic a,
 .widget-more a,
+.widget-creator a,
 .media-body a,
 .widget-topic a:visited,
+.widget-creator a:visited,
 .widget-more a:visited,
 .media-body a:visited {
     color: #1d439b;
@@ -574,13 +581,10 @@ footer {
 }
 
 .widget-topic a:hover,
+.widget-creator a:hover,
 .widget-more a:hover {
     color: #ff9800;
-}
-
-.widget-creator {
-    color: #661700;
-    font-size: 14px;
+    text-decoration: none;
 }
 
 

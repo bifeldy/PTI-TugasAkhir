@@ -42,9 +42,15 @@
                         Popularity: {{ detailData.popularity }}
                         <br />
                         Genres:
-                        <a *ngFor="let genre of detailData.genres; index as i;" routerLink="/genre/{{genre.id}}">
-                            {{genre.name}}
-                        </a>
+                        <a *ngIf="detailData.genres.length == 0; then genreKosong; else genreAda;"></a>
+                        <ng-template #genreKosong>
+                            Oh no! Tidak ada genre.
+                        </ng-template>
+                        <ng-template #genreAda>
+                            <a *ngFor="let genre of detailData.genres; index as i;" routerLink="/genre/{{genre.id}}">
+                                {{genre.name}}
+                            </a>
+                        </ng-template>
                         <br />
                     </div>
                     
@@ -58,21 +64,29 @@
                 </h3>
                 <div class="widget-content">
                     <ul class="list-unstyled">
-                        <li class="media widget-topic" *ngFor="let companyName of detailData.production_companies;">
-                            <img class="mr-2" src="https://image.tmdb.org/t/p/original{{companyName.logo_path}}" width="50"/>
-                            <div class="media-body">
-                                <strong>{{ companyName.name }}</strong>
-                                <br />
-                                <span class="widget-creator">
-                                    {{ companyName.origin_country }}
-                                    <span *ngFor="let companyOrigin of detailData.production_countries;">
-                                        <span *ngIf="companyName.origin_country == companyOrigin.iso_3166_1">
-                                            {{ ' -- ' + companyOrigin.name }}
+                        <div *ngIf="detailData.production_companies.length != 0; then adaProducer; else tidakAdaProducer"></div>
+                        <ng-template #adaProducer>
+                            <li class="media widget-topic" *ngFor="let companyName of detailData.production_companies;">
+                                <img class="mr-2" src="https://image.tmdb.org/t/p/original{{companyName.logo_path}}" width="50"/>
+                                <div class="media-body">
+                                    <strong>{{ companyName.name }}</strong>
+                                    <br />
+                                    <span class="widget-creator">
+                                        {{ companyName.origin_country }}
+                                        <span *ngFor="let companyOrigin of detailData.production_countries;">
+                                            <span *ngIf="companyName.origin_country == companyOrigin.iso_3166_1">
+                                                {{ ' -- ' + companyOrigin.name }}
+                                            </span>
                                         </span>
                                     </span>
-                                </span>
-                            </div>
-                        </li>
+                                </div>
+                            </li>
+                        </ng-template>
+                        <ng-template #tidakAdaProducer>
+                            <li class="media widget-topic">
+                                Hmn~ Tidak Ada Producer.
+                            </li>
+                        </ng-template>
                     </ul>
                 </div>
             </div>
@@ -88,9 +102,17 @@
                     {{ detailData.original_title + "'s"}} Overview
                 </h3>
                 <div class="widget-content">
-                    <div class="widget-topic">
-                        {{ detailData.overview }}
-                    </div>
+                    <div *ngIf="detailData.overview == '' || detailData.overview == null; then sinopsisTidakAda; else sinopsisAda"></div>
+                    <ng-template #sinopsisTidakAda>
+                        <div class="widget-topic">
+                            'Huh! Tidak Ada Sinopsis.
+                        </div>
+                    </ng-template>
+                    <ng-template #sinopsisAda>
+                        <div class="widget-topic">
+                            {{ detailData.overview }}
+                        </div>
+                    </ng-template>
                 </div>
             </div>
 
@@ -107,14 +129,68 @@
                 <div class="widget-content">
                     <div class="widget-topic">
                         <div class="carousel">
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
-                            <div class="carousel-cell" data-flickity-bg-lazyload="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png"></div>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nama</h5>
+                                        <p class="card-text">Isi Deskripsi</p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nama</h5>
+                                        <p class="card-text">Isi Deskripsi</p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nama</h5>
+                                        <p class="card-text">Isi Deskripsi</p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nama</h5>
+                                        <p class="card-text">Isi Deskripsi</p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nama</h5>
+                                        <p class="card-text">Isi Deskripsi</p>
+                                    </div>  
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Deskripsi -->
+            <div class="widget widget-bg mb-3 NanumPenScript">
+                <h3 class="widget-header">
+                    Tautan Unduhan
+                </h3>
+                <div class="widget-content">
+                    <ul class="list-unstyled">
+                        <li class="media widget-topic" style="font-size: 20px;">
+                            Belum Ada Link Buat Download Chuy. <br />
+                            Yang Garap Takarir (Subtitle) Lagi Sibuk Nugas Akhir Proyek Bro!
+                        </li>
+                    </ul>
                 </div>
             </div>
   

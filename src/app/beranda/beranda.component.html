@@ -72,145 +72,245 @@
                 </h3>
                 <div id="rilisanHome" class="widget-content">
                     <div class="carousel">
-                        <div title="{{rilisanData.results[0].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[0].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[0].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[0].poster_path}}" alt="{{rilisanData.results[0].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[0].id}}">
+                                            <strong>{{rilisanData.results[0].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[1].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[1].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[1].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[1].poster_path}}" alt="{{rilisanData.results[1].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[1].id}}">
+                                            <strong>{{rilisanData.results[1].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[2].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[2].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[2].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[2].poster_path}}" alt="{{rilisanData.results[2].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[2].id}}">
+                                            <strong>{{rilisanData.results[2].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[3].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[3].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[3].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[3].poster_path}}" alt="{{rilisanData.results[3].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[3].id}}">
+                                            <strong>{{rilisanData.results[3].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[4].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[4].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[4].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[4].poster_path}}" alt="{{rilisanData.results[4].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[4].id}}">
+                                            <strong>{{rilisanData.results[4].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[5].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[5].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[5].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[5].poster_path}}" alt="{{rilisanData.results[5].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[5].id}}">
+                                            <strong>{{rilisanData.results[5].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[6].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[6].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[6].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[6].poster_path}}" alt="{{rilisanData.results[6].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[6].id}}">
+                                            <strong>{{rilisanData.results[6].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[7].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[7].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[7].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[7].poster_path}}" alt="{{rilisanData.results[7].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[7].id}}">
+                                            <strong>{{rilisanData.results[7].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[8].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[8].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[8].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[8].poster_path}}" alt="{{rilisanData.results[8].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[8].id}}">
+                                            <strong>{{rilisanData.results[8].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[9].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[9].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[9].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[9].poster_path}}" alt="{{rilisanData.results[9].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[9].id}}">
+                                            <strong>{{rilisanData.results[9].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[10].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[10].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[10].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[10].poster_path}}" alt="{{rilisanData.results[10].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[10].id}}">
+                                            <strong>{{rilisanData.results[10].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[11].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[11].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[11].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[11].poster_path}}" alt="{{rilisanData.results[11].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[11].id}}">
+                                            <strong>{{rilisanData.results[11].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[12].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[12].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[12].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[12].poster_path}}" alt="{{rilisanData.results[12].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[12].id}}">
+                                            <strong>{{rilisanData.results[12].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[13].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[13].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[13].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[13].poster_path}}" alt="{{rilisanData.results[13].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[13].id}}">
+                                            <strong>{{rilisanData.results[13].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[14].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[14].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[14].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[14].poster_path}}" alt="{{rilisanData.results[14].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[14].id}}">
+                                            <strong>{{rilisanData.results[14].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[15].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[15].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[15].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[15].poster_path}}" alt="{{rilisanData.results[15].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[15].id}}">
+                                            <strong>{{rilisanData.results[15].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[16].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[16].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[16].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[16].poster_path}}" alt="{{rilisanData.results[16].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[16].id}}">
+                                            <strong>{{rilisanData.results[16].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[17].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[17].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[17].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[17].poster_path}}" alt="{{rilisanData.results[17].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[17].id}}">
+                                            <strong>{{rilisanData.results[17].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[18].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[18].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[18].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[18].poster_path}}" alt="{{rilisanData.results[18].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[18].id}}">
+                                            <strong>{{rilisanData.results[18].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
-                        <div title="{{rilisanData.results[19].title}}" (dblclick)="this._pelayanService.openDetailPage(rilisanData.results[19].id)" class="carousel-cell"
-                            [ngStyle]="{
-                                'background': 'url(' + 'https://image.tmdb.org/t/p/w185_and_h278_bestv2' + rilisanData.results[19].poster_path + ')',
-                                'background-position': 'center center',
-                                'background-size': '150px 225px'
-                            }">
+                        <div class="carousel-cell">
+                            <div class="card">
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{rilisanData.results[19].poster_path}}" alt="{{rilisanData.results[19].title}}" />
+                                <div class="card-body" style="padding: 5px 10px;">
+                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                        <a routerLink="/detail/{{rilisanData.results[19].id}}">
+                                            <strong>{{rilisanData.results[19].original_title}}</strong>
+                                        </a>
+                                    </div>
+                                </div>  
+                            </div>
                         </div>
                     </div>
                 </div>

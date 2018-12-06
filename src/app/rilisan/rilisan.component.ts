@@ -28,8 +28,6 @@ export class RilisanComponent implements OnInit {
           relativeTo: this._route
         });
       }
-      // Ambil Website Data
-      this.websiteData = this._pelayanService.getWesiteData();
       // Ambil Data Rilisan
       this._pelayanService.getRilisan(this.pageNumber)
           .subscribe(
@@ -57,6 +55,8 @@ export class RilisanComponent implements OnInit {
           );
     });
     // Sekali Ini Tidak Listening URL
+    // Ambil Website Data
+    this.websiteData = this._pelayanService.getWesiteData();
   }
 
   rilisanPreviousPage() {
