@@ -1,4 +1,4 @@
-export interface IPengumumanHome {
+export interface IPengumuman {
     id: number,
     img: [],
     title: string,
@@ -11,6 +11,7 @@ export interface IPengumumanHome {
 
 export interface IDiskusiHome {
     id: number,
+    url: string,
     img: [],
     title: string,
     content: string,

@@ -1,0 +1,102 @@
+<!-- Notification -->
+<div class="notification col-12">
+
+    <!-- Warning -->
+    <div class="alert alert-info">
+        <span class="close-button">&times;</span>
+        <span class="timeStamp">15/09/2012 - 02:18</span>
+        [<strong>Info</strong>] Website Masih Dalam Tahap Pengembangan! 
+    </div>
+
+</div>
+
+<!-- Content Row -->
+<div class="container">
+
+    <!-- Kontent -->
+    <div class="row mt-4">
+
+        <!-- Kolom Kiri -->
+        <div class="col-sm-12 col-md-7 col-lg-8">
+
+            <!-- Announcements -->
+            <div class="widget widget-bg mb-3 Roboto">
+                <h3 class="widget-header">
+                    {{pengumumanData.title}}
+                </h3>
+                <div id="pengumuman" class="widget-content">
+                    <div class="media widget-topic">
+                        <img class="mr-3" width="85" src="{{pengumumanData.img[0]}}" alt="{{pengumumanData.img[1]}}" />
+                        <div class="media-body">
+                            <span class="widget-creator">
+                                <i class="fa fa-calendar" title="Tanggal Terbit"> {{pengumumanData.calendar[0]}}</i> &nbsp;
+                                <i class="fa fa-clock-o" title="Waktu Terbit"> {{pengumumanData.calendar[1]}}</i> &nbsp;
+                                <i class="fa fa-commenting-o" title="Jumlah Komentar"> {{pengumumanData.comment}}</i> &nbsp;
+                                <i class="fa fa-tags" title="Kategori"> 
+                                    <a routerLink="/tag/{{tag}}" *ngFor="let tag of pengumumanData.tags"> {{tag}}</a>
+                                </i> &nbsp;
+                                <i class="fa fa-user-o" title="Penulis">
+                                    <a routerLink="/profile/{{pengumumanData.user[0]}}"> {{pengumumanData.user[1]}}</a>
+                                </i> &nbsp;
+                            </span>
+                            <div class="d-none d-md-block">
+                                <br />
+                                {{pengumumanData.content}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review -->
+            <div class="widget widget-bg mb-3 Roboto">
+                <h3 class="widget-header">
+                    Komentar
+                </h3>
+                <div id="komentar" class="widget-content">
+                    <ul class="list-unstyled">
+                        <li class="media widget-topic">
+                            <img class="mr-3" width="85" src="{{pengumumanData.img[0]}}" alt="{{pengumumanData.img[1]}}" />
+                            <div class="media-body">
+                                <span class="widget-creator">
+                                    <i class="fa fa-user-o" title="Penulis">
+                                        <a routerLink="/profile/{{pengumumanData.user[0]}}"> {{pengumumanData.user[1]}}</a>
+                                    </i>
+                                    <br />
+                                    <i class="fa fa-calendar" title="Tanggal Terbit"> {{pengumumanData.calendar[0]}}</i> &nbsp;
+                                    <i class="fa fa-clock-o" title="Waktu Terbit"> {{pengumumanData.calendar[1]}}</i> &nbsp;
+                                </span>
+                                <div class="d-none d-md-block">
+                                    <br />
+                                    {{pengumumanData.content}}
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Kolom Kanan -->
+        <div class="col-sm-12 col-md-5 col-lg-4">
+
+            <!-- Advertisement -->
+            <div class="gambar mb-3">
+                <span class="close-button">&times;</span>
+                <img src="/assets/img/Forum.jpg" alt="New Open Forum Registration" />
+            </div>
+
+            <!-- Discord -->
+            <div class="widget widget-bg mb-3 NanumPenScript">
+                <h3 class="widget-header">
+                    Join Our Discord Chat Now!
+                </h3>
+                <iframe src="https://discordapp.com/widget?id=342220398022098944&theme=dark" height="450" allowtransparency="true" frameborder="0"></iframe>
+            </div>
+
+        </div>
+        
+    </div>
+
+</div>

@@ -23,6 +23,7 @@ export class BerandaComponent implements OnInit {
   }];
   public diskusiData = [{
     "id": 0,
+    "url": "",
     "img": ["/assets/img/404_1.svg", "404."],
     "title": "Tidak Ada Data.",
     "content": "Tidak Ada Data Yang Bisa Ditampilkan.",

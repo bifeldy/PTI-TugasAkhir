@@ -4,11 +4,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { PelayanService } from '../_pelayan/pelayan.service';
 
 @Component({
-  selector: 'app-detail',
-  templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.css']
+  selector: 'app-rilisan-detail',
+  templateUrl: './rilisan-detail.component.html',
+  styleUrls: ['./rilisan-detail.component.css']
 })
-export class DetailComponent implements OnInit {
+export class RilisanDetailComponent implements OnInit {
 
   public websiteData = {};
   public dataId: number;

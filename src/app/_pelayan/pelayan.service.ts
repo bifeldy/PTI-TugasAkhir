@@ -4,7 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 
 import { 
-  IPengumumanHome, 
+  IPengumuman, 
   IDiskusiHome, 
   IRilisanHome, 
   IPopularHome, 
@@ -36,8 +36,8 @@ export class PelayanService {
     return this.websiteData;
   }
 
-  getPengumumanHome(): Observable<IPengumumanHome[]> {
-    return this.http.get<IPengumumanHome[]>(this.pengumumanHome);
+  getPengumumanHome(): Observable<IPengumuman[]> {
+    return this.http.get<IPengumuman[]>(this.pengumumanHome);
   }
 
   getDiskusiHome(): Observable<IDiskusiHome[]> {

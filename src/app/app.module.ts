@@ -11,7 +11,10 @@ import { MasukComponent } from './masuk/masuk.component';
 import { KesalahanComponent } from './kesalahan/kesalahan.component';
 import { RilisanComponent } from './rilisan/rilisan.component';
 import { PelayanService } from './_pelayan/pelayan.service';
-import { DetailComponent } from './detail/detail.component';
+import { PengumumanComponent } from './pengumuman/pengumuman.component';
+import { PengumumanDetailComponent } from './pengumuman-detail/pengumuman-detail.component';
+import { DiskusiComponent } from './diskusi/diskusi.component';
+import { RilisanDetailComponent } from './rilisan-detail/rilisan-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { DetailComponent } from './detail/detail.component';
     MasukComponent,
     KesalahanComponent,
     RilisanComponent,
-    DetailComponent
+    PengumumanComponent,
+    PengumumanDetailComponent,
+    DiskusiComponent,
+    RilisanDetailComponent
   ],
   imports: [
     BrowserModule,

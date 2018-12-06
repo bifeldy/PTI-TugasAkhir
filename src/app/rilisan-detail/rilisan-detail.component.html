@@ -19,13 +19,19 @@
             <!-- Advertisement -->
             <div class="gambar mb-3">
                 <span class="close-button">&times;</span>
-                <img src="https://image.tmdb.org/t/p/original{{detailData.poster_path}}" alt="{{ detailData.original_title | slice: 0:20 }}" />
+                <div *ngIf="detailData.poster_path == null || detailData.poster_path == ''; then posterKosong; else posterAda;"></div>
+                <ng-template #posterKosong>
+                        <img src="/assets/img/404.gif" alt="Aw~ Gambar Poster Tidak Ada." />
+                </ng-template>
+                <ng-template #posterAda>
+                    <img src="https://image.tmdb.org/t/p/original{{detailData.poster_path}}" alt="{{ detailData.original_title | slice: 0:20 }}" />
+                </ng-template>
             </div>
 
             <!-- Information -->
             <div class="widget widget-bg mb-3 Roboto">
                 <h3 class="widget-header">
-                    Information
+                    Informasi
                 </h3>
                 <div class="widget-content">
                     <div class="widget-topic">
@@ -120,11 +126,11 @@
             <div class="widget widget-bg mb-3 IndieFlower">
                 <h3 class="widget-header">
                     <span class="widget-more" style="float: right;">
-                        <a href="/post" style="font-weight: normal; font-size: 15px;">
+                        <a routerLink="/detail/{{detailData.id}}/caststaff" style="font-weight: normal; font-size: 15px;">
                             View More
                         </a>
                     </span>
-                    Casts
+                    Casts & Staff
                 </h3>
                 <div class="widget-content">
                     <div class="widget-topic">
@@ -132,45 +138,45 @@
                             <div class="carousel-cell">
                                 <div class="card">
                                     <img class="card-img-top" src="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Nama</h5>
-                                        <p class="card-text">Isi Deskripsi</p>
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <h5 class="card-title">Nama Pemain</h5>
+                                        <p class="card-text">Nama Karakter</p>
                                     </div>  
                                 </div>
                             </div>
                             <div class="carousel-cell">
                                 <div class="card">
                                     <img class="card-img-top" src="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Nama</h5>
-                                        <p class="card-text">Isi Deskripsi</p>
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <h5 class="card-title">Nama Pemain</h5>
+                                        <p class="card-text">Nama Karakter</p>
                                     </div>  
                                 </div>
                             </div>
                             <div class="carousel-cell">
                                 <div class="card">
                                     <img class="card-img-top" src="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Nama</h5>
-                                        <p class="card-text">Isi Deskripsi</p>
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <h5 class="card-title">Nama Pemain</h5>
+                                        <p class="card-text">Nama Karakter</p>
                                     </div>  
                                 </div>
                             </div>
                             <div class="carousel-cell">
                                 <div class="card">
                                     <img class="card-img-top" src="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Nama</h5>
-                                        <p class="card-text">Isi Deskripsi</p>
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <h5 class="card-title">Nama Pemain</h5>
+                                        <p class="card-text">Nama Karakter</p>
                                     </div>  
                                 </div>
                             </div>
                             <div class="carousel-cell">
                                 <div class="card">
                                     <img class="card-img-top" src="https://orig00.deviantart.net/7641/f/2018/195/4/e/platelet_from_cells_at_work__by_mumuryu-dch6kz8.png">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Nama</h5>
-                                        <p class="card-text">Isi Deskripsi</p>
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <h5 class="card-title">Nama Pemain</h5>
+                                        <p class="card-text">Nama Karakter</p>
                                     </div>  
                                 </div>
                             </div>
@@ -198,7 +204,7 @@
             <div class="widget widget-bg mb-3 CormorantGaramond">
                 <h3 class="widget-header">
                     <span class="widget-more" style="float: right;">
-                        <a href="/post" style="font-weight: normal; font-size: 15px;">
+                        <a routerLink="/detail/{{detailData.id}}/komentar" style="font-weight: normal; font-size: 15px;">
                             View More
                         </a>
                     </span>
@@ -249,5 +255,7 @@
                 </div>
             </div>
         </div>
+
     </div>
+    
 </div>

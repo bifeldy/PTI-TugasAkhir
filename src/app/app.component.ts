@@ -17,4 +17,8 @@ export class AppComponent {
     this.wesiteData = this._pelayanService.getWesiteData();
   }
 
+  pencarian(query: string){
+
+  }
+
 }
