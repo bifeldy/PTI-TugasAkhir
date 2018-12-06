@@ -111,6 +111,13 @@
 
 <!-- Footer -->
 <footer>
+    <div class="gitHub ShadowsIntoLight" style="float: right;">
+        <a href="{{githubLastCommit.url}}" title="Github Latest Master Commit">
+            <i class="fa fa-fw fa-code-fork"></i>
+            {{ githubLastCommit.sha | slice: 0:8 }}
+        </a>
+        &nbsp;
+    </div>
     <div class="ShadowsIntoLight" style="float: left;">
         &nbsp;
         <span class="copyleft">

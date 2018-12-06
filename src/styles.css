@@ -580,8 +580,16 @@ footer {
     font-size: 18px;
 }
 
+.gitHub a,
+.gitHub a:visited {
+    color: #20ff6b;
+    text-decoration: none;
+    font-size: 18px;
+}
+
 .widget-topic a:hover,
 .widget-creator a:hover,
+.gitHub a:hover,
 .widget-more a:hover {
     color: #ff9800;
     text-decoration: none;

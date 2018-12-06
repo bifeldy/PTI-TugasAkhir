@@ -101,3 +101,17 @@ export interface IRilisanDetail {
 export interface IGenres {
     genres: []
 }
+
+export interface IGithubLastCommit {
+    "sha": "ca594d47252ae9d54de19bbf591f4c54cdacf8da",
+    "node_id": "MDY6Q29tbWl0MTUzNTkwODAyOmNhNTk0ZDQ3MjUyYWU5ZDU0ZGUxOWJiZjU5MWY0YzU0Y2RhY2Y4ZGE=",
+    "commit": {},
+    "url": "https://api.github.com/repos/bifeldy/PTI-TugasAkhir/commits/ca594d47252ae9d54de19bbf591f4c54cdacf8da",
+    "html_url": "https://github.com/bifeldy/PTI-TugasAkhir/commit/ca594d47252ae9d54de19bbf591f4c54cdacf8da",
+    "comments_url": "https://api.github.com/repos/bifeldy/PTI-TugasAkhir/commits/ca594d47252ae9d54de19bbf591f4c54cdacf8da/comments",
+    "author": {},
+    "committer": {},
+    "parents": [],
+    "stats": {},
+    "files": []
+}
