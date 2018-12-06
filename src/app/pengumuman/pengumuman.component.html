@@ -35,8 +35,8 @@
                                         </a>
                                     </div>
                                     <div class="d-none d-md-block">
-                                        {{data.content | slice: 0:100}}
-                                        <div class="d-none d-md-block" *ngIf="data.content.length >= 100">...</div>
+                                        {{data.content | slice: 0:80}}
+                                        <span *ngIf="data.content.length >= 80">...</span>
                                     </div>
                                     <span class="widget-creator">
                                         <i class="fa fa-calendar" title="Tanggal Terbit"> {{data.calendar[0]}}</i> &nbsp;
