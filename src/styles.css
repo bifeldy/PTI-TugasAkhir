@@ -688,3 +688,9 @@ select:focus {
     margin: 3px 0;
     padding: 3px 0;
 }
+
+/* Hosting Gretongan */
+
+img[src="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]{
+    display: none;
+}
