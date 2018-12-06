@@ -1,7 +1,7 @@
 # ![logo](src/favicon.ico) *PTI-TugasAkhir | Web. Forum*
 
 > Sebuah website yang berbentuk forum dibuat sebagai tugas akhir mata kuliah 'Pengantar Teknologi Internet' <br />
-> Mata Kuliah Ini Bersifat Front-End Saja (Tanpa Back-End) Dan Menggunakan Angular+Bootstrap (>_<")
+> Mata Kuliah Ini Bersifat Front-End Saja (Tanpa Back-End) (>_<")
 
 <br />
 
