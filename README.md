@@ -47,11 +47,7 @@ $ ng serve --open
 
 ## Pengembang
 
-* [**Steven Reinhart**](https://www.FaceBook.com/Steven.Kam.73)
 * [**Basilius Bias Astho Christyono**](https://www.FaceBook.com/Bifeldy)
-* [**Malvin Joostensz**](https://www.FaceBook.com/Malvin.Joostensz.7)
-* [**Raynaldi Tjan**](https://www.FaceBook.com/Tjannn)
-* [**Reddy Kusuma Jaya**](https://www.FaceBook.com/Reddy.KusumaJaya)
 
 <br />
 
