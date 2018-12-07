@@ -42,6 +42,15 @@ export class AppComponent {
             console.log(err.message);
           }
         );
+        this._pelayanService.loadScriptTEXT(`
+          let sidebarMenuClick = document.getElementById('navbar');
+          let sidebarMenu = document.getElementById('navbar').getElementsByTagName('a');
+          sidebarMenuClick.addEventListener("click", event => {
+            if(window.innerWidth <= 768 || window.OuterWidth <= 768) {
+              mobileShowHide();
+            }
+          }, false);
+        `);
   }
 
   pencarian(query: string){

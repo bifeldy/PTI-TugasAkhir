@@ -9,7 +9,8 @@ import {
   IPopularHome, 
   IRilisanDetail,
   IGenres,
-  IGithubLastCommit
+  IGithubLastCommit,
+  ITentang
  } from './pelayan';
 
 @Injectable({
@@ -29,6 +30,7 @@ export class PelayanService {
   private rilisanDetail: string = "https://api.themoviedb.org/3/movie/";
   private genres = "https://api.themoviedb.org/3/genre/movie/list?api_key=" + this.TMDbAPIKey;
   private githubAPI = "https://api.github.com/repos/bifeldy/PTI-TugasAkhir/commits/master";
+  private Tentang = "/assets/json/tentang.json";
 
   constructor(private http: HttpClient, private _router: Router, private _route: ActivatedRoute) { }
 
@@ -82,6 +84,10 @@ export class PelayanService {
 
   githubLastCommit(): Observable<IGithubLastCommit> {
     return this.http.get<IGithubLastCommit>(this.githubAPI);
+  }
+
+  getAbout(): Observable<ITentang> {
+    return this.http.get<ITentang>(this.Tentang);
   }
 
 }

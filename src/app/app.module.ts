@@ -15,6 +15,7 @@ import { PengumumanComponent } from './pengumuman/pengumuman.component';
 import { PengumumanDetailComponent } from './pengumuman-detail/pengumuman-detail.component';
 import { RilisanDetailComponent } from './rilisan-detail/rilisan-detail.component';
 import { DisqusModule } from "ngx-disqus";
+import { TentangComponent } from './tentang/tentang.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DisqusModule } from "ngx-disqus";
     RilisanComponent,
     PengumumanComponent,
     PengumumanDetailComponent,
-    RilisanDetailComponent
+    RilisanDetailComponent,
+    TentangComponent
   ],
   imports: [
     BrowserModule,

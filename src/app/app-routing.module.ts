@@ -7,6 +7,7 @@ import { RilisanComponent } from './rilisan/rilisan.component';
 import { PengumumanComponent } from './pengumuman/pengumuman.component';
 import { PengumumanDetailComponent } from './pengumuman-detail/pengumuman-detail.component';
 import { RilisanDetailComponent } from './rilisan-detail/rilisan-detail.component';
+import { TentangComponent } from './tentang/tentang.component';
 
 const routes: Routes = [
   // Halaman Utama
@@ -22,6 +23,8 @@ const routes: Routes = [
   // Detail Film
   { path: 'detail', redirectTo: 'rilisan/1' },
   { path: 'detail/:id', component: RilisanDetailComponent },
+  // Halaman Tentang
+  { path: 'tentang', component: TentangComponent },
   // Halaman 404
   { path: 'kesalahan', component: KesalahanComponent },
   // Halaman Yang Tidak Ketemu 404

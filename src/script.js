@@ -111,4 +111,4 @@ function mobileShowHide() {
         document.getElementById('navbar').style.height = '';
         toggleShowHide();
     }
-}
+};

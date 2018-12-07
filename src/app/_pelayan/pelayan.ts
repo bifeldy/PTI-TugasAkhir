@@ -103,3 +103,16 @@ export interface IGithubLastCommit {
     "stats": {},
     "files": []
 }
+
+export interface ITentang {
+    sekilasInfo: string,
+    library: [
+        {
+            id: number,
+            img: string,
+            title: string,
+            content: string,
+            url: string
+        }
+    ]
+}

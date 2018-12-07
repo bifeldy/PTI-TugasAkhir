@@ -1,0 +1,47 @@
+{
+    "sekilasInfo": "Sebuah website yang dibuat sebagai tugas akhir mata kuliah 'Pengantar Teknologi Internet'. Mata Kuliah Ini Bersifat Front-End Saja (Tanpa Back-End) (>_<\")",
+    "library": [
+        {
+            "id": 1,
+            "img": "/assets/img/tentang/nodeJS.jpg",
+            "title": "NodeJS",
+            "content": "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+            "url": "https://nodejs.org/en/"
+        },
+        {
+            "id": 2,
+            "img": "https://angular.io/assets/images/logos/angular/angular.svg",
+            "title": "Angular v7.1.1",
+            "content": "One framework. Mobile & desktop.",
+            "url": "https://angular.io/"
+        },
+        {
+            "id": 3,
+            "img": "https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg",
+            "title": "Bootstrap v4.1",
+            "content": "Build responsive, mobile-first projects on the web with the world's most popular front-end component library.",
+            "url": "https://getbootstrap.com/"
+        },
+        {
+            "id": 4,
+            "img": "/assets/img/tentang/jquery_logo.jpg",
+            "title": "jQuery v3.3.1",
+            "content": "Write less, do more.",
+            "url": "https://jquery.com"
+        },
+        {
+            "id": 5,
+            "img": "https://rxjs-dev.firebaseapp.com/generated/images/marketing/home/Rx_Logo-512-512.png",
+            "title": "RxJs v6.0",
+            "content": "Reactive Extensions Library for JavaScript",
+            "url": "https://rxjs-dev.firebaseapp.com"
+        },
+        {
+            "id": 6,
+            "img": "https://flickity.metafizzy.co/img/flickity-illustration.gif",
+            "title": "Flickity v2.1",
+            "content": "Touch, responsive, flickable carousels",
+            "url": "https://flickity.metafizzy.co/"
+        }
+    ]
+}
