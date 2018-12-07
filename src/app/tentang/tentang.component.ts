@@ -16,7 +16,7 @@ export class TentangComponent implements OnInit {
     "library": [
       {
         "id": 0,
-        "img": ["/assets/img/404_0.svg", "404."],
+        "img": "/assets/img/404_0.svg",
         "title": "Tidak Ada Data.",
         "content": "Tidak Ada Data Yang Bisa Ditampilkan.",
         "url": "http://www.Bifeldy.tk/"
