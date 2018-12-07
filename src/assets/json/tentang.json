@@ -42,6 +42,13 @@
             "title": "Flickity v2.1",
             "content": "Touch, responsive, flickable carousels",
             "url": "https://flickity.metafizzy.co/"
+        },
+        {
+            "id": 7,
+            "img": "/assets/img/diskusi/disqus.png",
+            "title": "Disqus v2.4.3",
+            "content": "The #1 way to build an audience on your website.",
+            "url": "https://disqus.com/"
         }
     ]
 }
