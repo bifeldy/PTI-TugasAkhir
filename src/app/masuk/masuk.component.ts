@@ -19,25 +19,25 @@ export class MasukComponent implements OnInit {
   returnUrl: string;
 
   constructor(
-    private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
-    private authenticationService: AuthenticationService,
-    private alertService: AlertService
+    private _formBuilder: FormBuilder,
+    private _route: ActivatedRoute,
+    private _router: Router,
+    private _authenticationService: AuthenticationService,
+    private _alertService: AlertService
   ) {
       // redirect to home if already logged in
-      if (this.authenticationService.currentUserValue) { 
-          this.router.navigate(['/']);
+      if (this._authenticationService.currentUserValue) { 
+          this._router.navigate(['/']);
       }
   }
 
   ngOnInit() {
-    this.loginForm = this.formBuilder.group({
+    this.loginForm = this._formBuilder.group({
         username: ['', Validators.required],
         password: ['', Validators.required]
     });
     // get return url from route parameters or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/';
   }
 
   // convenience getter for easy access to form fields
@@ -50,13 +50,13 @@ export class MasukComponent implements OnInit {
           return;
       }
       this.loading = true;
-      this.authenticationService.login(this.f.username.value, this.f.password.value)
+      this._authenticationService.login(this.f.username.value, this.f.password.value)
           .pipe(first()).subscribe(
             data => {
-                this.router.navigate([this.returnUrl]);
+                this._router.navigate([this.returnUrl]);
             },
             error => {
-                this.alertService.error(error);
+                this._alertService.error(error);
                 this.loading = false;
             });
   }

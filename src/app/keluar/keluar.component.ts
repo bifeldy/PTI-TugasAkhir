@@ -8,6 +8,7 @@ import { User } from '../_models';
 @Component({
   selector: 'app-keluar',
   template: `
+    "Susahnya" Sistem Login Masuk Di FrontEnd -- Asli Berantakan! Wkwkwk~
   `,
   styles: []
 })
@@ -17,16 +18,16 @@ export class KeluarComponent implements OnInit {
 
   constructor(
     private _pelayanService: PelayanService,
-    private router: Router,
-    private authenticationService: AuthenticationService
+    private _router: Router,
+    private _authenticationService: AuthenticationService
   ) {
-    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    this._authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
 
   ngOnInit() {
-    this.authenticationService.logout();
+    this._authenticationService.logout();
     location.reload();
-    this.router.navigate(['/']);
+    this._router.navigate(['/']);
   }
 
 }

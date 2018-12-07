@@ -35,10 +35,10 @@ export class AppComponent {
 
   constructor(
     private _pelayanService: PelayanService,
-    private router: Router,
-    private authenticationService: AuthenticationService
+    private _router: Router,
+    private _authenticationService: AuthenticationService
   ) {
-    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    this._authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
 
   ngOnInit() {
@@ -58,7 +58,7 @@ export class AppComponent {
           let sidebarMenuClick = document.getElementById('navbar');
           let sidebarMenu = document.getElementById('navbar').getElementsByTagName('a');
           sidebarMenuClick.addEventListener("click", event => {
-            if(window.innerWidth <= 768) {
+            if(window.innerWidth <= 768 || window.OuterWidth <= 768) {
               mobileShowHide();
             }
           }, false);

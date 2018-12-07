@@ -32,30 +32,30 @@ export class PelayanService {
   private githubAPI = "https://api.github.com/repos/bifeldy/PTI-TugasAkhir/commits/master";
   private Tentang = "/assets/json/tentang.json";
 
-  constructor(private http: HttpClient, private _router: Router, private _route: ActivatedRoute) { }
+  constructor(private _http: HttpClient, private _router: Router, private _route: ActivatedRoute) { }
 
   getWesiteData() {
     return this.websiteData;
   }
 
   getPengumumanHome(): Observable<IPengumuman[]> {
-    return this.http.get<IPengumuman[]>(this.pengumumanHome);
+    return this._http.get<IPengumuman[]>(this.pengumumanHome);
   }
 
   getRilisan(page: number): Observable<IRilisanHome> {
-    return this.http.get<IRilisanHome>(this.rilisanHome + page);
+    return this._http.get<IRilisanHome>(this.rilisanHome + page);
   }
   
   getRilisanDetail(id: number): Observable<IRilisanDetail> {
-    return this.http.get<IRilisanDetail>(this.rilisanDetail + id + '?api_key=' + this.TMDbAPIKey);
+    return this._http.get<IRilisanDetail>(this.rilisanDetail + id + '?api_key=' + this.TMDbAPIKey);
   }
 
   getGenres(): Observable<IGenres> {
-    return this.http.get<IGenres>(this.genres);
+    return this._http.get<IGenres>(this.genres);
   }
 
   getPopuler(page: number): Observable<IPopularHome> {
-    return this.http.get<IPopularHome>(this.popularHome + page);
+    return this._http.get<IPopularHome>(this.popularHome + page);
   }
 
   openDetailPage(id: number){
@@ -83,11 +83,11 @@ export class PelayanService {
   }
 
   githubLastCommit(): Observable<IGithubLastCommit> {
-    return this.http.get<IGithubLastCommit>(this.githubAPI);
+    return this._http.get<IGithubLastCommit>(this.githubAPI);
   }
 
   getAbout(): Observable<ITentang> {
-    return this.http.get<ITentang>(this.Tentang);
+    return this._http.get<ITentang>(this.Tentang);
   }
 
 }

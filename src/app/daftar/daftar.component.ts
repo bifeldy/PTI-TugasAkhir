@@ -17,20 +17,20 @@ export class DaftarComponent implements OnInit {
   submitted = false;
 
   constructor(
-    private formBuilder: FormBuilder,
-    private router: Router,
-    private authenticationService: AuthenticationService,
-    private userService: UserService,
-    private alertService: AlertService
+    private _formBuilder: FormBuilder,
+    private _router: Router,
+    private _authenticationService: AuthenticationService,
+    private _userService: UserService,
+    private _alertService: AlertService
   ) {
     // redirect to home if already logged in
-    if (this.authenticationService.currentUserValue) { 
-      this.router.navigate(['/']);
+    if (this._authenticationService.currentUserValue) { 
+      this._router.navigate(['/']);
     }
   }
 
   ngOnInit() {
-    this.registerForm = this.formBuilder.group({
+    this.registerForm = this._formBuilder.group({
         firstName: ['', Validators.required],
         lastName: ['', Validators.required],
         username: ['', Validators.required],
@@ -48,14 +48,14 @@ export class DaftarComponent implements OnInit {
         return;
     }
     this.loading = true;
-    this.userService.register(this.registerForm.value)
+    this._userService.register(this.registerForm.value)
         .pipe(first()).subscribe(
           data => {
-              this.alertService.success('Registration successful', true);
-              this.router.navigate(['/masuk']);
+              this._alertService.success('Registration successful', true);
+              this._router.navigate(['/masuk']);
           },
           error => {
-              this.alertService.error(error);
+              this._alertService.error(error);
               this.loading = false;
           });
   }
