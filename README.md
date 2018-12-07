@@ -41,7 +41,7 @@ $ ng serve --open
 * [Bootstrap v4.1](https://getbootstrap.com/docs/4.1/getting-started/download)
 * [jQuery v3.3](https://jquery.com/download)
 * [Rxjs v6.3](https://rxjs-dev.firebaseapp.com/guide/installation)
-* [Flickity](https://flickity.metafizzy.co)
+* [Flickity v2.1](https://flickity.metafizzy.co)
 
 <br />
 
