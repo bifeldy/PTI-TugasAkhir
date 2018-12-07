@@ -69,7 +69,8 @@
             const Discord = new Crate({
                 server: '342220398022098944',
                 channel: '342220398022098944',
-                location: ['bottom', 'right']
+                location: ['bottom', 'right'],
+                shard: 'https://cl2.widgetbot.io'
             });
             setInterval(() => {
                 Discord.options.color = "#000000".replace(/0/g, () => {
