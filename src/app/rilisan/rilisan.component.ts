@@ -60,6 +60,12 @@ export class RilisanComponent implements OnInit {
             data => {
               if(data !== null && data !== undefined) {
                 this.rilisanData = data;
+                if(this.pageNumber > this.rilisanData.total_pages){
+                  this.pageNumber = this.rilisanData.total_pages;
+                  this._router.navigate(['../', this.pageNumber], {
+                    relativeTo: this._route
+                  });
+                }
               }
             },
             err => {
