@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { PelayanService } from './_pelayan/pelayan.service';
+import { AuthenticationService } from './_services';
+import { User } from './_models';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +12,8 @@ import { PelayanService } from './_pelayan/pelayan.service';
 })
 
 export class AppComponent {
+
+  currentUser: User;
 
   public websiteData = {
     "websiteTitle": "",
@@ -27,7 +33,13 @@ export class AppComponent {
     "files": []
   };
 
-  constructor(private _pelayanService: PelayanService) { }
+  constructor(
+    private _pelayanService: PelayanService,
+    private router: Router,
+    private authenticationService: AuthenticationService
+  ) {
+    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+  }
 
   ngOnInit() {
     this.websiteData = this._pelayanService.getWesiteData();
@@ -46,7 +58,7 @@ export class AppComponent {
           let sidebarMenuClick = document.getElementById('navbar');
           let sidebarMenu = document.getElementById('navbar').getElementsByTagName('a');
           sidebarMenuClick.addEventListener("click", event => {
-            if(window.innerWidth <= 768 || window.OuterWidth <= 768) {
+            if(window.innerWidth <= 768) {
               mobileShowHide();
             }
           }, false);

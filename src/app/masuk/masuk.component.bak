@@ -1,0 +1,39 @@
+<!-- Content Row -->
+<div class="container">
+
+    <!-- Kontent -->
+    <div class="row mt-4">
+
+        <!-- Center Content -->
+        <div class="widget col-m-12 col-d-12">
+                        
+            <!-- User Information -->
+            <div id="userInfo" class="widget widget-bg CormorantGaramond mobile-hide">
+                <h3 class="widget-header">
+                    Hai, Tamu Pendatang!
+                </h3>
+                <div class="widget-content">
+                    <p></p>
+                    <div class="widget-topic">
+                        <label for="UserID">Username</label>
+                        <div class="inputWithIcon inputIconBg">
+                            <input type="text" name="UserID" id="UserID" placeholder="UserName" />
+                            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                        </div>
+                        <label for="PassID">Password</label>
+                        <div class="inputWithIcon inputIconBg">
+                            <input type="password" name="PassID" id="PassID" placeholder="Password" />
+                            <i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
+                        </div>
+                        <input type="submit" id="btnRegist" value="Daftar" />
+                        <input type="submit" id="btnLogin" value="Masuk" />
+                        <div id="errorLogin" style="color: red;">ID/Password Yang Anda Masukkan Salah!</div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+    </div>
+
+</div>
