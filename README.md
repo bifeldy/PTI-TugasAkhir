@@ -20,7 +20,7 @@ Tempat Sharing File-File Gitu Deh ...
 
 <br />
 
-### Download -> *Edit* -> Hosting!
+### Download -> *Edit*
 
 ```sh
 $ git clone https://github.com/bifeldy/PTI-TugasAkhir.git
@@ -28,6 +28,26 @@ $ cd PTI-TugasAkhir
 $ npm install
 $ ng serve --open
 ```
+
+### Modify *.htaccess* File on Your Web-Hosting
+
+```.htaccess
+RewriteEngine On
+    # If an existing asset or directory is requested go to it as it is
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+    RewriteRule ^ - [L]
+    # If the requested resource doesn't exist, use index.html
+RewriteRule ^ /index.html
+```
+
+### Build Project And Upload!
+
+```sh
+$ ng build --prod
+$ cd dist/TugasAkhir
+```
+Upload All File To *public_html* And Make Sure Same Directory With *.htaccess*
 
 <br />
 
