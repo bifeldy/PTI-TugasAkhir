@@ -37,6 +37,7 @@ $ ng serve --open
 * [Ms. Edge](https://www.microsoft.com/en-us/download/details.aspx?id=48126)
 * [Google Chrome](https://www.google.com/chrome)
 * [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/download)
+* [NodeJS v11.3](https://nodejs.org/)
 * [Angular v7.1](https://angular.io/guide/quickstart)
 * [Bootstrap v4.1](https://getbootstrap.com/docs/4.1/getting-started/download)
 * [jQuery v3.3](https://jquery.com/download)

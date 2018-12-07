@@ -6,7 +6,7 @@
             "img": "/assets/img/tentang/nodeJS.jpg",
             "title": "NodeJS v11.3",
             "content": "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
-            "url": "https://nodejs.org/en/"
+            "url": "https://nodejs.org/"
         },
         {
             "id": 2,
