@@ -23,13 +23,13 @@ const routes: Routes = [
   { path: 'daftar', component: DaftarComponent },
   // Halaman Pengumuman
   { path: 'pengumuman', component: PengumumanComponent },
-  { path: 'pengumuman/:id', component: PengumumanDetailComponent, canActivate: [AuthGuard] },
+  { path: 'pengumuman/:id', component: PengumumanDetailComponent },
   // Halaman Rilisan
   { path: 'rilisan', redirectTo: 'rilisan/1' },
-  { path: 'rilisan/:id', component: RilisanComponent, canActivate: [AuthGuard] },
+  { path: 'rilisan/:id', component: RilisanComponent },
   // Detail Film
   { path: 'detail', redirectTo: 'rilisan/1' },
-  { path: 'detail/:id', component: RilisanDetailComponent, canActivate: [AuthGuard] },
+  { path: 'detail/:id', component: RilisanDetailComponent },
   // Halaman Tentang
   { path: 'tentang', component: TentangComponent },
   // Halaman 404
