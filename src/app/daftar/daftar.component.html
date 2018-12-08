@@ -66,32 +66,6 @@
                 </div>
             </div>
 
-            <!-- Announcements -->
-            <div class="widget widget-bg mb-3 Roboto">
-                <h3 class="widget-header">
-                    Library & Alat Yang Digunakan
-                </h3>
-                <div id="pengumumanHome" class="widget-content">
-                    <ul class="list-unstyled">
-                        <li class="media widget-topic" *ngFor="let data of tentangData.library">
-                            <img class="mr-3" width="85" src="{{data.img}}" alt="{{data.title}}" />
-                            <div class="media-body">
-                                <div class="mt-0 mb-1">
-                                    <a href="{{data.url}}">
-                                        <strong>{{data.title}}</strong>
-                                    </a>
-                                </div>
-                                {{data.content}}
-                                <br />
-                                <span class="widget-creator">
-                                    <i class="fa fa-globe" title="Website Resmi"> {{data.url}}</i> &nbsp;
-                                </span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
 
         <!-- Kolom Kanan -->
