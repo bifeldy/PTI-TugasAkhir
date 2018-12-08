@@ -40,11 +40,11 @@
             </form>
         </div>
 
-        <a *ngIf="websiteData.sudahLogin; then sudahLogin; else belumLogin;"></a>
+        <a *ngIf="currentUser != null && currentUser != undefined; then sudahLogin; else belumLogin;"></a>
         <ng-template #sudahLogin>
             <a routerLink="/profil" routerLinkActive="bifeldy-active">
                 <i class="fa fa-fw fa-user"></i>
-                <div class="visibleMenu"> Profil Saya</div>
+                <div class="visibleMenu"> {{currentUser.firstName}}</div>
             </a>
             <a routerLink="/keluar" routerLinkActive="bifeldy-active">
                 <i class="fa fa-fw fa-sign-out"></i>
