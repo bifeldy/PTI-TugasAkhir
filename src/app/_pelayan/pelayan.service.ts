@@ -17,11 +17,7 @@ import {
   providedIn: 'root'
 })
 export class PelayanService {
-
-  private websiteData = {
-    "websiteTitle": "Misty Chronexial",
-    "sudahLogin": false
-  };
+  
   private TMDbAPIKey: string = "2c864ba983acc179387f55e736decaf9";
   private APIReadAccessTokenV4: string = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYzg2NGJhOTgzYWNjMTc5Mzg3ZjU1ZTczNmRlY2FmOSIsInN1YiI6IjViZjRmNjg1YzNhMzY4MThhMzBiOWNkNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fJLY67P3_yC-C1cDvjEttNEYhPVTZf4BraM-lKDP2Vo";
   private pengumumanHome: string = "/assets/json/pengumuman.json";
@@ -33,10 +29,6 @@ export class PelayanService {
   private Tentang = "/assets/json/tentang.json";
 
   constructor(private _http: HttpClient, private _router: Router, private _route: ActivatedRoute) { }
-
-  getWesiteData() {
-    return this.websiteData;
-  }
 
   getPengumumanHome(): Observable<IPengumuman[]> {
     return this._http.get<IPengumuman[]>(this.pengumumanHome);

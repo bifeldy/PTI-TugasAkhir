@@ -10,7 +10,6 @@ import { PelayanService } from '../_pelayan/pelayan.service';
 })
 export class TentangComponent implements OnInit {
 
-  public websiteData = {};
   public tentangData = {
     "sekilasInfo": "",
     "library": [
@@ -28,7 +27,6 @@ export class TentangComponent implements OnInit {
 
   ngOnInit() {
     // Sekali Ini Tidak Listening URL
-    this.websiteData = this._pelayanService.getWesiteData();
     this._pelayanService.getAbout()
         .subscribe(
           data => {

@@ -10,7 +10,6 @@ import { PelayanService } from '../_pelayan/pelayan.service';
 })
 export class PengumumanComponent implements OnInit {
 
-  public websiteData = {};
   public pengumumanData = [{
     "id": 0,
     "img": ["/assets/img/404_0.svg", "404."],
@@ -26,7 +25,6 @@ export class PengumumanComponent implements OnInit {
 
   ngOnInit() {
     // Sekali Ini Tidak Listening URL
-    this.websiteData = this._pelayanService.getWesiteData();
     this._pelayanService.getPengumumanHome()
         .subscribe(
           data => {

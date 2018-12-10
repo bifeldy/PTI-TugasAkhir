@@ -11,10 +11,6 @@ import { PelayanService } from '../_pelayan/pelayan.service';
 export class RilisanDetailComponent implements OnInit {
 
   public dataId: number;
-  public websiteData = {
-    "websiteTitle": "Misty Chronexial",
-    "sudahLogin": false
-  };
   public detailData = {
     adult: false,
     backdrop_path: "",
@@ -54,8 +50,6 @@ export class RilisanDetailComponent implements OnInit {
         relativeTo: this._route
       });
     }
-    // Ambil Website Data
-    this.websiteData = this._pelayanService.getWesiteData();
     this._pelayanService.getRilisanDetail(this.dataId)
         .subscribe(
           data => {

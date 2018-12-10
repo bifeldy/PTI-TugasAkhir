@@ -9,11 +9,7 @@ import { PelayanService } from '../_pelayan/pelayan.service';
   styleUrls: ['./beranda.component.css']
 })
 export class BerandaComponent implements OnInit {
-
-  public websiteData = {
-    "websiteTitle": "Misty Chronexial",
-    "sudahLogin": false
-  };
+  
   public rilisanData = {
     results: [
       {
@@ -76,7 +72,6 @@ export class BerandaComponent implements OnInit {
 
   ngOnInit() {
     // Sekali Ini Tidak Listening URL
-    this.websiteData = this._pelayanService.getWesiteData();
     this._pelayanService.getPengumumanHome()
         .subscribe(
           data => {

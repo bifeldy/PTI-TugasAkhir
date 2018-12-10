@@ -15,10 +15,6 @@ export class AppComponent {
 
   currentUser: User;
 
-  public websiteData = {
-    "websiteTitle": "",
-    "sudahLogin": false
-  };
   public githubLastCommit = {
     "sha": "",
     "node_id": "",
@@ -42,7 +38,6 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.websiteData = this._pelayanService.getWesiteData();
     this._pelayanService.githubLastCommit()
         .subscribe(
           data => {

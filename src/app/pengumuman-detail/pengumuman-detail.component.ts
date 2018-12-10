@@ -10,7 +10,6 @@ import { PelayanService } from '../_pelayan/pelayan.service';
 })
 export class PengumumanDetailComponent implements OnInit {
 
-  public websiteData = {};
   public pengumumanId: number;
   public pengumumanData = {
     "id": 0,
@@ -27,7 +26,6 @@ export class PengumumanDetailComponent implements OnInit {
 
   ngOnInit() {
     // Sekali Ini Tidak Listening URL
-    this.websiteData = this._pelayanService.getWesiteData();
     this.pengumumanId = parseInt(this._route.snapshot.paramMap.get('id'));
     if(this.pengumumanId <= 0){
       this.pengumumanId = 1;

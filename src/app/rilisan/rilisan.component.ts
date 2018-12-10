@@ -11,10 +11,6 @@ import { PelayanService } from '../_pelayan/pelayan.service';
 export class RilisanComponent implements OnInit {
 
   public pageNumber: number;
-  public websiteData = {
-    "websiteTitle": "Misty Chronexial",
-    "sudahLogin": false
-  };
   public rilisanData = {
     results: [
       {
@@ -85,8 +81,6 @@ export class RilisanComponent implements OnInit {
           );
     });
     // Sekali Ini Tidak Listening URL
-    // Ambil Website Data
-    this.websiteData = this._pelayanService.getWesiteData();
   }
 
   rilisanPreviousPage() {
