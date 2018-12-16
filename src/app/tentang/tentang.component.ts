@@ -36,6 +36,7 @@ export class TentangComponent implements OnInit {
           data => {
             if(data !== null && data !== undefined) {
               this.tentangData = data;
+              this.tentangData.sekilasInfo = this.tentangData.sekilasInfo.replace(new RegExp('\n', 'g'), "<br />");
             }
           },
           err => {
