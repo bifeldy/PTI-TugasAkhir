@@ -21,7 +21,11 @@ export class PengumumanComponent implements OnInit {
     "user": ["admin", "Administrator"]
   }];
 
-  constructor(private _pelayanService: PelayanService, private _router: Router, private _route: ActivatedRoute) { }
+  constructor(
+    private _pelayanService: PelayanService,
+    private _router: Router,
+    private _route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
     // Sekali Ini Tidak Listening URL
@@ -37,6 +41,19 @@ export class PengumumanComponent implements OnInit {
             console.log(err.message);
           }
         );
+    this._pelayanService.loadScriptTEXT(`
+      var close = document.getElementsByClassName("close-button");
+      for (var i = 0; i < close.length; i++) {
+          close[i].onclick = function(){
+              var div = this.parentElement;
+              div.style.opacity = "0";
+              setTimeout(function(){
+                  div.style.display = "none";
+                  $(div).remove();
+              }, 600);
+          }
+      }
+    `);
   }
 
 }

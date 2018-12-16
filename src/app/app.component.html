@@ -44,7 +44,7 @@
         <ng-template #sudahLogin>
             <a routerLink="/profil" routerLinkActive="bifeldy-active">
                 <i class="fa fa-fw fa-user"></i>
-                <div class="visibleMenu"> {{currentUser.firstName}}</div>
+                <div class="visibleMenu"> {{ currentUser.firstName + ' ' + currentUser.lastName }}</div>
             </a>
             <a routerLink="/keluar" routerLinkActive="bifeldy-active">
                 <i class="fa fa-fw fa-sign-out"></i>

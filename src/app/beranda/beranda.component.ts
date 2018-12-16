@@ -68,7 +68,11 @@ export class BerandaComponent implements OnInit {
     "user": ["admin", "Administrator"]
   }];
 
-  constructor(private _pelayanService: PelayanService, private _router: Router, private _route: ActivatedRoute) { }
+  constructor(
+    private _pelayanService: PelayanService,
+    private _router: Router,
+    private _route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
     // Sekali Ini Tidak Listening URL

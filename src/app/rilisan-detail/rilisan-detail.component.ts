@@ -39,7 +39,11 @@ export class RilisanDetailComponent implements OnInit {
     vote_count: 0
   };
 
-  constructor(private _pelayanService: PelayanService, private _router: Router, private _route: ActivatedRoute) { }
+  constructor(
+    private _pelayanService: PelayanService,
+    private _router: Router,
+    private _route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
     // Sekali Ini Tidak Listening URL

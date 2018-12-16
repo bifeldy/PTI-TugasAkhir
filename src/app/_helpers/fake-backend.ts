@@ -10,7 +10,29 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         // array in local storage for registered users
-        let users: any[] = JSON.parse(localStorage.getItem('users')) || [];
+        let users: any[];
+        if (localStorage.getItem('users') == null || localStorage.getItem('users') == undefined) {
+            users = [
+                {
+                    "firstName": "Bias",
+                    "lastName": "A.",
+                    "username": "Bifeldy",
+                    "password": "Bifeldyz",
+                    "id":1
+                },
+                {
+                    "firstName": "User",
+                    "lastName": "UAS-PTI",
+                    "username": "user",
+                    "password": "uaspti",
+                    "id":2
+                }
+            ];
+            localStorage.setItem('users', JSON.stringify(users));
+        }
+        else {
+            users = JSON.parse(localStorage.getItem('users'));
+        }
 
         // wrap in delayed observable to simulate server api call
         return of(null).pipe(mergeMap(() => {
@@ -36,7 +58,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                     return of(new HttpResponse({ status: 200, body: body }));
                 } else {
                     // else return 400 bad request
-                    return throwError({ error: { message: 'Username or password is incorrect' } });
+                    return throwError({ error: { message: 'Username atau password salah!' } });
                 }
             }
 
@@ -76,7 +98,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 // validation
                 let duplicateUser = users.filter(user => { return user.username === newUser.username; }).length;
                 if (duplicateUser) {
-                    return throwError({ error: { message: 'Username "' + newUser.username + '" is already taken' } });
+                    return throwError({ error: { message: 'Username "' + newUser.username + '" sudah terpakai!' } });
                 }
 
                 // save new user

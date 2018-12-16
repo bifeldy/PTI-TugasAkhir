@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AlertService, AuthenticationService } from '../_services';
+import { PelayanService } from '../_pelayan/pelayan.service';
 
 @Component({
   selector: 'app-masuk',
@@ -23,7 +24,8 @@ export class MasukComponent implements OnInit {
     private _route: ActivatedRoute,
     private _router: Router,
     private _authenticationService: AuthenticationService,
-    private _alertService: AlertService
+    private _alertService: AlertService,
+    private _pelayanService: PelayanService
   ) {
       // redirect to home if already logged in
       if (this._authenticationService.currentUserValue) { 
@@ -35,7 +37,20 @@ export class MasukComponent implements OnInit {
     this.loginForm = this._formBuilder.group({
         username: ['', Validators.required],
         password: ['', Validators.required]
-    });
+    });    
+    this._pelayanService.loadScriptTEXT(`
+      var close = document.getElementsByClassName("close-button");
+      for (var i = 0; i < close.length; i++) {
+          close[i].onclick = function(){
+              var div = this.parentElement;
+              div.style.opacity = "0";
+              setTimeout(function(){
+                  div.style.display = "none";
+                  $(div).remove();
+              }, 600);
+          }
+      }
+    `);
     // get return url from route parameters or default to '/'
     this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/';
   }

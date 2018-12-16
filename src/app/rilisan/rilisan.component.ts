@@ -37,7 +37,11 @@ export class RilisanComponent implements OnInit {
   };
   public genreData = {};
 
-  constructor(private _pelayanService: PelayanService, private _router: Router, private _route: ActivatedRoute) { }
+  constructor(
+    private _pelayanService: PelayanService,
+    private _router: Router,
+    private _route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
     // Listening URL Terus

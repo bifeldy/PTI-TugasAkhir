@@ -28,7 +28,11 @@ export class PelayanService {
   private githubAPI = "https://api.github.com/repos/bifeldy/PTI-TugasAkhir/commits/master";
   private Tentang = "/assets/json/tentang.json";
 
-  constructor(private _http: HttpClient, private _router: Router, private _route: ActivatedRoute) { }
+  constructor(
+    private _http: HttpClient,
+    private _router: Router,
+    private _route: ActivatedRoute
+  ) { }
 
   getPengumumanHome(): Observable<IPengumuman[]> {
     return this._http.get<IPengumuman[]>(this.pengumumanHome);
