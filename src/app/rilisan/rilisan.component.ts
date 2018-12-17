@@ -55,34 +55,40 @@ export class RilisanComponent implements OnInit {
         });
       }
       // Ambil Data Rilisan
-      this._pelayanService.getRilisan(this.pageNumber)
-          .subscribe(
-            data => {
-              if(data !== null && data !== undefined) {
-                this.rilisanData = data;
-                if(this.pageNumber > this.rilisanData.total_pages){
-                  this.pageNumber = this.rilisanData.total_pages;
-                  this._router.navigate(['../', this.pageNumber], {
-                    relativeTo: this._route
-                  });
-                }
-              }
-            },
-            err => {
-              console.log(err.message);
+      this._pelayanService.getRilisan(this.pageNumber).subscribe(
+        data => {
+          if(data !== null && data !== undefined) {
+            this.rilisanData = data;
+            if(this.pageNumber > this.rilisanData.total_pages){
+              this.pageNumber = this.rilisanData.total_pages;
+              this._router.navigate(['../', this.pageNumber], {
+                relativeTo: this._route
+              });
             }
-          );
-      this._pelayanService.getGenres()
-          .subscribe(
-            data => {
-              if(data !== null && data !== undefined) {
-                this.genreData = data;
+            for (let index = 0; index < this.rilisanData.results.length; index++) {
+              if (this.rilisanData.results[index].poster_path == null || this.rilisanData.results[index].poster_path == "") {
+                    this.rilisanData.results[index].poster_path = "/assets/img/404.gif";
               }
-            },
-            err => {
-              console.log(err.message);
+              else {
+                this.rilisanData.results[index].poster_path = "https://image.tmdb.org/t/p/w185_and_h278_bestv2" + this.rilisanData.results[index].poster_path;
+              }
             }
-          );
+          }
+        },
+        err => {
+          console.log(err.message);
+        }
+      );
+      this._pelayanService.getGenres().subscribe(
+        data => {
+          if(data !== null && data !== undefined) {
+            this.genreData = data;
+          }
+        },
+        err => {
+          console.log(err.message);
+        }
+      );
     });
     // Sekali Ini Tidak Listening URL
   }

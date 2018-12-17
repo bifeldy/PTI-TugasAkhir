@@ -37,22 +37,21 @@ export class PengumumanDetailComponent implements OnInit {
         relativeTo: this._route
       });
     }
-    this._pelayanService.getPengumumanHome()
-        .subscribe(
-          data => {
-            if(data !== null && data !== undefined) {
-              if(data.length <= 0) return;
-              for(let i = 0; i<data.length; i++) {
-                  if(this.pengumumanId == data[i].id) {
-                    this.pengumumanData = data[i];
-                  }
+    this._pelayanService.getPengumumanHome().subscribe(
+      data => {
+        if(data !== null && data !== undefined) {
+          if(data.length <= 0) return;
+          for(let i = 0; i<data.length; i++) {
+              if(this.pengumumanId == data[i].id) {
+                this.pengumumanData = data[i];
               }
-            }
-          },
-          err => {
-            console.log(err.message);
           }
-        );
+        }
+      },
+      err => {
+        console.log(err.message);
+      }
+    );
     this._pelayanService.loadScriptTEXT(`
       var close = document.getElementsByClassName("close-button");
       for (var i = 0; i < close.length; i++) {

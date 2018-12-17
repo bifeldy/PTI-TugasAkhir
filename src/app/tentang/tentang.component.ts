@@ -31,18 +31,17 @@ export class TentangComponent implements OnInit {
 
   ngOnInit() {
     // Sekali Ini Tidak Listening URL
-    this._pelayanService.getAbout()
-        .subscribe(
-          data => {
-            if(data !== null && data !== undefined) {
-              this.tentangData = data;
-              this.tentangData.sekilasInfo = this.tentangData.sekilasInfo.replace(new RegExp('\n', 'g'), "<br />");
-            }
-          },
-          err => {
-            console.log(err.message);
-          }
-        );
+    this._pelayanService.getAbout().subscribe(
+      data => {
+        if(data !== null && data !== undefined) {
+          this.tentangData = data;
+          this.tentangData.sekilasInfo = this.tentangData.sekilasInfo.replace(new RegExp('\n', 'g'), "<br />");
+        }
+      },
+      err => {
+        console.log(err.message);
+      }
+    );
     this._pelayanService.loadScriptTEXT(`
       var close = document.getElementsByClassName("close-button");
       for (var i = 0; i < close.length; i++) {

@@ -24,7 +24,7 @@
                         <img src="/assets/img/404.gif" alt="Aw~ Gambar Poster Tidak Ada." />
                 </ng-template>
                 <ng-template #posterAda>
-                    <img src="https://image.tmdb.org/t/p/original{{detailData.poster_path}}" alt="{{ detailData.original_title | slice: 0:20 }}" />
+                    <img src="{{detailData.poster_path}}" alt="{{ detailData.original_title | slice: 0:20 }}" />
                 </ng-template>
             </div>
 
@@ -73,7 +73,7 @@
                         <div *ngIf="detailData.production_companies.length != 0; then adaProducer; else tidakAdaProducer"></div>
                         <ng-template #adaProducer>
                             <li class="media widget-topic" *ngFor="let companyName of detailData.production_companies;">
-                                <img class="mr-2" src="https://image.tmdb.org/t/p/original{{companyName.logo_path}}" width="50"/>
+                                <img class="mr-2" src="{{companyName.logo_path}}" width="50"/>
                                 <div class="media-body">
                                     <strong>{{ companyName.name }}</strong>
                                     <br />
@@ -130,53 +130,53 @@
                             View More
                         </a>
                     </span>
-                    Casts & Staff
+                    Daftar Pemain
                 </h3>
                 <div class="widget-content">
                     <div class="widget-topic">
                         <div class="carousel">
                             <div class="carousel-cell">
                                 <div class="card">
-                                    <img class="card-img-top" src="/assets/img/platelet.png">
+                                    <img class="card-img-top" src="{{this.detailStaff.cast[0].profile_path}}">
                                     <div class="card-body" style="padding: 5px 10px;">
-                                        <h5 class="card-title">Nama Pemain</h5>
-                                        <p class="card-text">Nama Karakter</p>
+                                        <h5 class="card-title">{{this.detailStaff.cast[0].name}}</h5>
+                                        <p class="card-text">{{this.detailStaff.cast[0].character}}</p>
                                     </div>  
                                 </div>
                             </div>
                             <div class="carousel-cell">
                                 <div class="card">
-                                    <img class="card-img-top" src="/assets/img/platelet.png">
+                                    <img class="card-img-top" src="{{this.detailStaff.cast[1].profile_path}}">
                                     <div class="card-body" style="padding: 5px 10px;">
-                                        <h5 class="card-title">Nama Pemain</h5>
-                                        <p class="card-text">Nama Karakter</p>
+                                        <h5 class="card-title">{{this.detailStaff.cast[1].name}}</h5>
+                                        <p class="card-text">{{this.detailStaff.cast[1].character}}</p>
                                     </div>  
                                 </div>
                             </div>
                             <div class="carousel-cell">
                                 <div class="card">
-                                    <img class="card-img-top" src="/assets/img/platelet.png">
+                                    <img class="card-img-top" src="{{this.detailStaff.cast[2].profile_path}}">
                                     <div class="card-body" style="padding: 5px 10px;">
-                                        <h5 class="card-title">Nama Pemain</h5>
-                                        <p class="card-text">Nama Karakter</p>
+                                        <h5 class="card-title">{{this.detailStaff.cast[2].name}}</h5>
+                                        <p class="card-text">{{this.detailStaff.cast[2].character}}</p>
                                     </div>  
                                 </div>
                             </div>
                             <div class="carousel-cell">
                                 <div class="card">
-                                    <img class="card-img-top" src="/assets/img/platelet.png">
+                                    <img class="card-img-top" src="{{this.detailStaff.cast[3].profile_path}}">
                                     <div class="card-body" style="padding: 5px 10px;">
-                                        <h5 class="card-title">Nama Pemain</h5>
-                                        <p class="card-text">Nama Karakter</p>
+                                        <h5 class="card-title">{{this.detailStaff.cast[3].name}}</h5>
+                                        <p class="card-text">{{this.detailStaff.cast[3].character}}</p>
                                     </div>  
                                 </div>
                             </div>
                             <div class="carousel-cell">
                                 <div class="card">
-                                    <img class="card-img-top" src="/assets/img/platelet.png">
+                                    <img class="card-img-top" src="{{this.detailStaff.cast[4].profile_path}}">
                                     <div class="card-body" style="padding: 5px 10px;">
-                                        <h5 class="card-title">Nama Pemain</h5>
-                                        <p class="card-text">Nama Karakter</p>
+                                        <h5 class="card-title">{{this.detailStaff.cast[4].name}}</h5>
+                                        <p class="card-text">{{this.detailStaff.cast[4].character}}</p>
                                     </div>  
                                 </div>
                             </div>

@@ -25,7 +25,14 @@ export class RilisanDetailComponent implements OnInit {
     overview: "",
     popularity: 0,
     poster_path: "",
-    production_companies: [],
+    production_companies: [
+      {
+        id: 0,
+        logo_path: "",
+        name: "",
+        origin_country: ""
+      }
+    ],
     production_countries: [],
     release_date: "",
     revenue: 0,
@@ -37,6 +44,32 @@ export class RilisanDetailComponent implements OnInit {
     video: false,
     vote_average: 0,
     vote_count: 0
+  };
+  public detailStaff = {
+    id: 0,
+    cast: [
+        {
+            cast_id: 0,
+            character: "",
+            credit_id: "",
+            gender: 0,
+            id: 0,
+            name: "",
+            order: 0,
+            profile_path: ""
+        }
+    ],
+    crew: [
+        {
+            credit_id: 0,
+            department: "",
+            gender: 0,
+            id: 0,
+            job: "",
+            name: "",
+            profile_path: ""
+        }
+    ]
   };
 
   constructor(
@@ -54,17 +87,48 @@ export class RilisanDetailComponent implements OnInit {
         relativeTo: this._route
       });
     }
-    this._pelayanService.getRilisanDetail(this.dataId)
-        .subscribe(
-          data => {
-            if(data !== null && data !== undefined) {
-              this.detailData = data;
-            }
-          },
-          err => {
-            console.log(err.message);
+    this._pelayanService.getRilisanDetail(this.dataId).subscribe(
+      data => {
+        if(data !== null && data !== undefined) {
+          this.detailData = data;
+          if (this.detailData.poster_path == null || this.detailData.poster_path == "") {
+                this.detailData.poster_path = "/assets/img/404.png";
           }
-        );
+          else {
+            this.detailData.poster_path = "https://image.tmdb.org/t/p/original" + this.detailData.poster_path;
+          }
+          for (let index = 0; index < this.detailData.production_companies.length; index++) {
+            if (this.detailData.production_companies[index].logo_path == null || this.detailData.production_companies[index].logo_path == "") {
+              this.detailData.production_companies[index].logo_path = "/assets/img/404.jpeg"
+            }
+            else {
+              this.detailData.production_companies[index].logo_path = "https://image.tmdb.org/t/p/original" + this.detailData.production_companies[index].logo_path;
+            }
+          }
+        }
+      },
+      err => {
+        console.log(err.message);
+      }
+    );
+    this._pelayanService.getStaff(this.dataId).subscribe(
+      data => {
+        if(data !== null && data !== undefined) {
+          this.detailStaff = data;
+          for (let index = 0; index < this.detailStaff.cast.length; index++) {
+            if (this.detailStaff.cast[index].profile_path == null || this.detailStaff.cast[index].profile_path == "") {
+              this.detailStaff.cast[index].profile_path = "/assets/img/404.jpg";
+            }
+            else {
+              this.detailStaff.cast[index].profile_path = "https://image.tmdb.org/t/p/w600_and_h900_bestv2" + this.detailStaff.cast[index].profile_path;
+            }
+          }
+        }
+      },
+      err => {
+        console.log(err.message);
+      }
+    );
     this._pelayanService.loadScriptTEXT(`
       $('.carousel').flickity({
         "contain": true,

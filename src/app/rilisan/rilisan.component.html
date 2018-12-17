@@ -61,13 +61,7 @@
                         </div>
                     </div>
                     <div class="image">
-                        <img *ngIf="data.poster_path == null || data.poster_path == undefine; then tidakAdaGambar; else adaGambar;" />
-                        <ng-template #tidakAdaGambar>
-                                <img width="167" height="242" alt="{{ data.original_title | slice: 0:20 }}" src="assets/img/404.gif" />
-                        </ng-template>
-                        <ng-template #adaGambar>
-                                <img width="167" height="242" alt="{{ data.original_title | slice: 0:20 }}" src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{data.poster_path}}" />
-                        </ng-template>
+                        <img width="167" height="242" alt="{{ data.original_title | slice: 0:20 }}" src="{{data.poster_path}}" />
                     </div>
                     <div class="synopsis js-synopsis" style="width: 160px;">
                         <span class="preline" *ngIf="data.overview == null || data.overview == undefine || data.overview == ''; then tidakAdaSinopsis; else adaSinopsis;"></span>

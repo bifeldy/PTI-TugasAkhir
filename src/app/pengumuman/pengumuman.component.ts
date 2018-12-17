@@ -29,18 +29,17 @@ export class PengumumanComponent implements OnInit {
 
   ngOnInit() {
     // Sekali Ini Tidak Listening URL
-    this._pelayanService.getPengumumanHome()
-        .subscribe(
-          data => {
-            if(data !== null && data !== undefined) {
-              if(data.length <= 0) return;
-              this.pengumumanData = data.reverse();
-            }
-          },
-          err => {
-            console.log(err.message);
-          }
-        );
+    this._pelayanService.getPengumumanHome().subscribe(
+      data => {
+        if(data !== null && data !== undefined) {
+          if(data.length <= 0) return;
+          this.pengumumanData = data.reverse();
+        }
+      },
+      err => {
+        console.log(err.message);
+      }
+    );
     this._pelayanService.loadScriptTEXT(`
       var close = document.getElementsByClassName("close-button");
       for (var i = 0; i < close.length; i++) {

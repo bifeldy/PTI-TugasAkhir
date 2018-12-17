@@ -10,7 +10,8 @@ import {
   IRilisanDetail,
   IGenres,
   IGithubLastCommit,
-  ITentang
+  ITentang,
+  IStaff
  } from './pelayan';
 
 @Injectable({
@@ -44,6 +45,10 @@ export class PelayanService {
   
   getRilisanDetail(id: number): Observable<IRilisanDetail> {
     return this._http.get<IRilisanDetail>(this.rilisanDetail + id + '?api_key=' + this.TMDbAPIKey);
+  }
+
+  getStaff(id: number): Observable<IStaff> {
+    return this._http.get<IStaff>(this.rilisanDetail + id + '/credits?api_key=' + this.TMDbAPIKey);
   }
 
   getGenres(): Observable<IGenres> {

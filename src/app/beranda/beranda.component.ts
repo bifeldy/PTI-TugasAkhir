@@ -76,40 +76,45 @@ export class BerandaComponent implements OnInit {
 
   ngOnInit() {
     // Sekali Ini Tidak Listening URL
-    this._pelayanService.getPengumumanHome()
-        .subscribe(
-          data => {
-            if(data !== null && data !== undefined) {
-              if(data.length <= 0) return;
-              this.pengumumanData = data.reverse();
+    this._pelayanService.getPengumumanHome().subscribe(
+      data => {
+        if(data !== null && data !== undefined) {
+          if(data.length <= 0) return;
+          this.pengumumanData = data.reverse();
+        }
+      },
+      err => {
+        console.log(err.message);
+      }
+    );
+    this._pelayanService.getRilisan(Math.floor(Math.random() * 50) + 1).subscribe(
+      data => {
+        if(data !== null && data !== undefined) {
+          this.rilisanData = data;
+          for (let index = 0; index < this.rilisanData.results.length; index++) {
+            if (this.rilisanData.results[index].poster_path == null || this.rilisanData.results[index].poster_path == "") {
+                  this.rilisanData.results[index].poster_path = "/assets/img/404.jpg";
             }
-          },
-          err => {
-            console.log(err.message);
-          }
-        );
-    this._pelayanService.getRilisan(Math.floor(Math.random() * 50) + 1)
-        .subscribe(
-          data => {
-            if(data !== null && data !== undefined) {
-              this.rilisanData = data;
+            else {
+              this.rilisanData.results[index].poster_path = "https://image.tmdb.org/t/p/w185_and_h278_bestv2" + this.rilisanData.results[index].poster_path;
             }
-          },
-          err => {
-            console.log(err.message);
           }
-        );
-    this._pelayanService.getPopuler(1)
-        .subscribe(
-          data => {
-            if(data !== null && data !== undefined) {
-              this.populerData = data;
-            }
-          },
-          err => {
-            console.log(err.message);
-          }
-        );
+        }
+      },
+      err => {
+        console.log(err.message);
+      }
+    );
+    this._pelayanService.getPopuler(1).subscribe(
+      data => {
+        if(data !== null && data !== undefined) {
+          this.populerData = data;
+        }
+      },
+      err => {
+        console.log(err.message);
+      }
+    );
     this._pelayanService.loadScriptTEXT(`
       $('.carousel').flickity({
         "contain": true,
