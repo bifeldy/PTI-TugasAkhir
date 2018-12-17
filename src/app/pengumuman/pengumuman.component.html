@@ -1,81 +1,69 @@
-<!-- Notification -->
-<div class="notification col-12">
+<!-- Content Row -->
+<div class="container">
 
-        <!-- Warning -->
-        <div class="alert alert-info">
-            <span class="close-button">&times;</span>
-            <span class="timeStamp">15/09/2012 - 02:18</span>
-            [<strong>Info</strong>] Website Masih Dalam Tahap Pengembangan! 
-        </div>
-    
-    </div>
-    
-    <!-- Content Row -->
-    <div class="container">
-    
-        <!-- Kontent -->
-        <div class="row mt-4">
-    
-            <!-- Kolom Kiri -->
-            <div class="col-sm-12 col-md-7 col-lg-8">
-    
-                <!-- Announcements -->
-                <div class="widget widget-bg mb-3 Roboto">
-                    <h3 class="widget-header">
-                        Pengumuman
-                    </h3>
-                    <div id="pengumumanHome" class="widget-content">
-                        <ul class="list-unstyled">
-                            <li class="media widget-topic" *ngFor="let data of pengumumanData">
-                                <img class="mr-3" width="85" src="{{data.img[0]}}" alt="{{data.img[1]}}" />
-                                <div class="media-body">
-                                    <div class="mt-0 mb-1">
-                                        <a routerLink="/pengumuman/{{data.id}}">
-                                            <strong>{{data.title}}</strong>
-                                        </a>
-                                    </div>
-                                    <div class="d-none d-md-block">
-                                        {{data.content | slice: 0:80}}
-                                        <span *ngIf="data.content.length >= 80">...</span>
-                                    </div>
-                                    <span class="widget-creator">
-                                        <i class="fa fa-calendar" title="Tanggal Terbit"> {{data.calendar[0]}}</i> &nbsp;
-                                        <i class="fa fa-clock-o" title="Waktu Terbit"> {{data.calendar[1]}}</i> &nbsp;
-                                        <i class="fa fa-commenting-o" title="Jumlah Komentar"> {{data.comment}}</i> &nbsp;
-                                        <i class="fa fa-tags" title="Kategori"> 
-                                            <a routerLink="/tag/{{tag}}" *ngFor="let tag of data.tags"> {{tag}}</a>
-                                        </i> &nbsp;
-                                        <i class="fa fa-user-o" title="Penulis">
-                                            <a routerLink="/users/{{data.user[0]}}"> {{data.user[1]}}</a>
-                                        </i> &nbsp;
-                                    </span>
+    <!-- Kontent -->
+    <div class="row mt-4">
+
+        <!-- Kolom Kiri -->
+        <div class="col-sm-12 col-md-7 col-lg-8">
+
+            <!-- Announcements -->
+            <div class="widget widget-bg mb-3 Roboto">
+                <h3 class="widget-header">
+                    Pengumuman
+                </h3>
+                <div id="pengumumanHome" class="widget-content">
+                    <ul class="list-unstyled">
+                        <li class="media widget-topic" *ngFor="let data of pengumumanData">
+                            <img class="mr-3" width="85" src="{{data.img[0]}}" alt="{{data.img[1]}}" />
+                            <div class="media-body">
+                                <div class="mt-0 mb-1">
+                                    <a routerLink="/pengumuman/{{data.id}}">
+                                        <strong>{{data.title}}</strong>
+                                    </a>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
+                                <div class="d-none d-md-block">
+                                    {{data.content | slice: 0:80}}
+                                    <span *ngIf="data.content.length >= 80">...</span>
+                                </div>
+                                <span class="widget-creator">
+                                    <i class="fa fa-calendar" title="Tanggal Terbit"> {{data.calendar[0]}}</i> &nbsp;
+                                    <i class="fa fa-clock-o" title="Waktu Terbit"> {{data.calendar[1]}}</i> &nbsp;
+                                    <i class="fa fa-commenting-o" title="Jumlah Komentar"> {{data.comment}}</i> &nbsp;
+                                    <i class="fa fa-tags" title="Kategori"> 
+                                        <a routerLink="/tag/{{tag}}" *ngFor="let tag of data.tags"> {{tag}}</a>
+                                    </i> &nbsp;
+                                    <i class="fa fa-user-o" title="Penulis">
+                                        <a routerLink="/users/{{data.user[0]}}"> {{data.user[1]}}</a>
+                                    </i> &nbsp;
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-    
             </div>
-    
-            <!-- Kolom Kanan -->
-            <div class="col-sm-12 col-md-5 col-lg-4">
-    
-                <!-- Advertisement -->
-                <div class="gambar mb-3">
-                    <span class="close-button">&times;</span>
-                    <img src="/assets/img/Forum.jpg" alt="New Open Forum Registration" />
-                </div>
-    
-                <!-- Discord -->
-                <div class="widget widget-bg mb-3 NanumPenScript">
-                    <h3 class="widget-header">
-                        Join Our Discord Chat Now!
-                    </h3>
-                    <iframe src="https://discordapp.com/widget?id=342220398022098944&theme=dark" height="450" allowtransparency="true" frameborder="0"></iframe>
-                </div>
-    
-            </div>
-            
+
         </div>
-    
+
+        <!-- Kolom Kanan -->
+        <div class="col-sm-12 col-md-5 col-lg-4">
+
+            <!-- Advertisement -->
+            <div class="gambar mb-3">
+                <span class="close-button">&times;</span>
+                <img src="/assets/img/Forum.jpg" alt="New Open Forum Registration" />
+            </div>
+
+            <!-- Discord -->
+            <div class="widget widget-bg mb-3 NanumPenScript">
+                <h3 class="widget-header">
+                    Join Our Discord Chat Now!
+                </h3>
+                <iframe src="https://discordapp.com/widget?id=342220398022098944&theme=dark" height="450" allowtransparency="true" frameborder="0"></iframe>
+            </div>
+
+        </div>
+        
     </div>
+
+</div>
