@@ -86,6 +86,10 @@
                                 <i class="fa fa-users" style="margin-left: 5px;"></i>
                                 {{ data.vote_count }}
                             </span>
+                            <span class="popular" title="Popularitas">
+                                <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                {{ data.popularity | number:'1.0-0' }}
+                            </span>
                             <span class="score" title="Skor">
                                 <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
                                 {{ data.vote_average }}
