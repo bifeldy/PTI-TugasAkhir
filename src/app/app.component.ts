@@ -38,26 +38,38 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this._pelayanService.githubLastCommit()
-        .subscribe(
-          data => {
-            if(data !== null && data !== undefined) {
-              this.githubLastCommit = data;
-            }
-          },
-          err => {
-            console.log(err.message);
+    this._pelayanService.githubLastCommit().subscribe(
+      data => {
+        if(data !== null && data !== undefined) {
+          this.githubLastCommit = data;
+        }
+      },
+      err => {
+        console.log(err.message);
+      }
+    );
+    this._pelayanService.loadScriptTEXT(`
+      let sidebarMenuClick = document.getElementById('navbar');
+      let sidebarMenu = document.getElementById('navbar').getElementsByTagName('a');
+      sidebarMenuClick.addEventListener("click", event => {
+        if(window.innerWidth <= 768 || window.OuterWidth <= 768) {
+          mobileShowHide();
+        }
+      }, false);
+    `);    
+    this._pelayanService.loadScriptTEXT(`
+      var close = document.getElementsByClassName("close-button");
+      for (var i = 0; i < close.length; i++) {
+          close[i].onclick = function(){
+              var div = this.parentElement;
+              div.style.opacity = "0";
+              setTimeout(function(){
+                  div.style.display = "none";
+                  $(div).remove();
+              }, 600);
           }
-        );
-        this._pelayanService.loadScriptTEXT(`
-          let sidebarMenuClick = document.getElementById('navbar');
-          let sidebarMenu = document.getElementById('navbar').getElementsByTagName('a');
-          sidebarMenuClick.addEventListener("click", event => {
-            if(window.innerWidth <= 768 || window.OuterWidth <= 768) {
-              mobileShowHide();
-            }
-          }, false);
-        `);
+      }
+    `);
   }
 
   pencarian(query: string){
