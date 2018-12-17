@@ -31,10 +31,10 @@ export class DaftarComponent implements OnInit {
 
   ngOnInit() {
     this.registerForm = this._formBuilder.group({
-        firstName: ['', Validators.required],
-        lastName: ['', Validators.required],
-        username: ['', Validators.required],
-        password: ['', [Validators.required, Validators.minLength(6)]]
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      username: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
@@ -45,18 +45,18 @@ export class DaftarComponent implements OnInit {
     this.submitted = true;
     // stop here if form is invalid
     if (this.registerForm.invalid) {
-        return;
+      return;
     }
     this.loading = true;
-    this._userService.register(this.registerForm.value)
-        .pipe(first()).subscribe(
-          data => {
-              this._alertService.success('Registration successful', true);
-              this._router.navigate(['/masuk']);
-          },
-          error => {
-              this._alertService.error(error);
-              this.loading = false;
-          });
+    this._userService.register(this.registerForm.value).pipe(first()).subscribe(
+      data => {
+        this._alertService.success('Registration successful', true);
+        this._router.navigate(['/masuk']);
+      },
+      error => {
+        this._alertService.error(error);
+        this.loading = false;
+      }
+    );
   }
 }

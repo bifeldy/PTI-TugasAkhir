@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: '', component: BerandaComponent },
   // Halaman Link User
   { path: 'masuk', component: MasukComponent },
-  { path: 'keluar', component: KeluarComponent },
+  { path: 'keluar', component: KeluarComponent, canActivate: [AuthGuard] },
   { path: 'daftar', component: DaftarComponent },
   // Halaman Pengumuman
   { path: 'pengumuman', component: PengumumanComponent },

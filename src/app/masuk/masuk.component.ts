@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -35,22 +35,9 @@ export class MasukComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this._formBuilder.group({
-        username: ['', Validators.required],
-        password: ['', Validators.required]
-    });    
-    this._pelayanService.loadScriptTEXT(`
-      var close = document.getElementsByClassName("close-button");
-      for (var i = 0; i < close.length; i++) {
-          close[i].onclick = function(){
-              var div = this.parentElement;
-              div.style.opacity = "0";
-              setTimeout(function(){
-                  div.style.display = "none";
-                  $(div).remove();
-              }, 600);
-          }
-      }
-    `);
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
     // get return url from route parameters or default to '/'
     this.returnUrl = this._route.snapshot.queryParams['returnUrl'] || '/';
   }
@@ -59,21 +46,21 @@ export class MasukComponent implements OnInit {
   get f() { return this.loginForm.controls; }
 
   onSubmit() {
-      this.submitted = true;
-      // stop here if form is invalid
-      if (this.loginForm.invalid) {
-          return;
+    this.submitted = true;
+    // stop here if form is invalid
+    if (this.loginForm.invalid) {
+      return;
+    }
+    this.loading = true;
+    this._authenticationService.login(this.f.username.value, this.f.password.value).pipe(first()).subscribe(
+      data => {
+        this._router.navigate([this.returnUrl]);
+      },
+      error => {
+        this._alertService.error(error);
+        this.loading = false;
       }
-      this.loading = true;
-      this._authenticationService.login(this.f.username.value, this.f.password.value)
-          .pipe(first()).subscribe(
-            data => {
-                this._router.navigate([this.returnUrl]);
-            },
-            error => {
-                this._alertService.error(error);
-                this.loading = false;
-            });
+    );
   }
 
 }
