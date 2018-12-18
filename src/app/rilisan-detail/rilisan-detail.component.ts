@@ -123,6 +123,22 @@ export class RilisanDetailComponent implements OnInit {
               this.detailStaff.cast[index].profile_path = "https://image.tmdb.org/t/p/w600_and_h900_bestv2" + this.detailStaff.cast[index].profile_path;
             }
           }
+          if (this.detailStaff.cast.length < 5) {
+            let jumlahCastKosong = this.detailStaff.cast.length;
+            for (let index = 0; index < 5-jumlahCastKosong; index++) {
+              this.detailStaff.cast.push({
+                cast_id: -1,
+                character: "",
+                credit_id: "",
+                gender: -1,
+                id: index,
+                name: "Tidak Ada Data",
+                order: index,
+                profile_path: "/assets/img/404.jpg"
+              });
+            }
+          }
+          console.log(this.detailStaff.cast);
         }
       },
       err => {
