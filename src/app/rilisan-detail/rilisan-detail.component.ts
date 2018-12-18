@@ -105,6 +105,8 @@ export class RilisanDetailComponent implements OnInit {
               this.detailData.production_companies[index].logo_path = "https://image.tmdb.org/t/p/original" + this.detailData.production_companies[index].logo_path;
             }
           }
+          if (this.detailData.release_date == "" || this.detailData.release_date == null) this.detailData.release_date = 'Tanggal Tidak Diketahui!';
+          if (this.detailData.status == "" || this.detailData.status == null) this.detailData.status = 'Tidak Jelas!';
         }
       },
       err => {
@@ -138,7 +140,6 @@ export class RilisanDetailComponent implements OnInit {
               });
             }
           }
-          console.log(this.detailStaff.cast);
         }
       },
       err => {
