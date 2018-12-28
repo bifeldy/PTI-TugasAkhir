@@ -306,6 +306,13 @@ hr.style16:before {
     border-radius: 20px; 
 }
 
+/* Footer */
+
+.copyleft {
+    display:inline-block;
+    transform: rotate(180deg);
+}
+
 /* Default HTML Tags */
 
 * {
@@ -316,7 +323,8 @@ body {
     margin: 0px;
     height: 100%;
     color: black;
-    /* background: url('../img/bg-img/bg-atas.gif') fixed repeat center -60px, url('../img/bg-img/bg-bawah.png') fixed center repeat; */
+    /* background: url('/assets/img/bg-img/bg-atas.gif') fixed repeat center -60px, url('/assets/img/bg-img/bg-bawah.png') fixed center repeat; */
+    background: url('/assets/img/bg-img/bg.png') fixed repeat;
     font-family: "ヒラギノ角ゴ Pro W3",
                  "Hiragino Kaku Gothic Pro",
                  "メイリオ",
@@ -402,7 +410,7 @@ footer {
 
 .bifeldy-navbar .banner {
     float: left;
-    /* background: url('../img/sidebar/banner.png'); */
+    /* background: url('/assets/img/sidebar/banner.png'); */
     background-repeat: no-repeat;
     height: 150px;
     text-align: center;
@@ -470,8 +478,8 @@ footer {
 
 .jumbotron {
     min-height: 268px;
-    /* background: url('../img/banner-logo/banner-logo-atas.png') right no-repeat,
-                url('../img/banner-logo/banner-logo-bawah.jpg') right repeat-x; */
+    /* background: url('/assets/img/banner-logo/banner-logo-atas.png') right no-repeat,
+                url('/assets/img/banner-logo/banner-logo-bawah.jpg') right repeat-x; */
     background-position: right;
     margin-top: 58px;
     margin-bottom: 0px;

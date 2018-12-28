@@ -1,0 +1,78 @@
+/*
+  Basilius Bias Astho Christyono
+  000.000.13536
+  https://github.com/bifeldy/PTI-TugasAkhir
+*/
+
+
+/* Nomor 1 */
+
+Library Yang Dipilih:
+[-] Angular v7.1.1
+[-] Bootstrap v4.1
+[-] jQuery v3.3.1
+
+Library Tambahan:
+[-] RxJs v6.0
+[-] Flickity v2.1
+[-] Disqus v2.4.3
+[-] Font Awesome v4.7
+
+
+/* Nomor 2 */
+Membuat Halaman Login:
+
+Angular saya menggunakan cli & saya mengikuti tutorial orang.
+Sistem login dengan menggunakan Javascript Web Token.
+Saya membuat komponent untuk login, lalu bikin guard untuk dan pengecekan sesi,
+kemudian membuat 'fake-backend.ts' sebagai sistem yang digunakan
+untuk memanage user yang ada.
+
+
+/* Nomor 3 */
+Cara mengambil data API:
+
+Sebelumnya, saya membuat service dimana si service inilah yang bertugas untuk
+mengambil data dari API. Saya beri nama 'pelayan.service.ts' dengan
+perintah  `ng generate service pelayan`.
+
+Sebelum menarik API, saya membuat rancangan interface data yang akan diterima.
+Rancangan interface ada di 'pelayan.ts'. Lalu pada halaman rilisan now playing,
+saya memanggil si pelayan dan melakukan penarikan API dengan parameter nomor
+halaman now playing yang diminta. Misal page 1 dan menyimpannya ke dalam
+variabel lalu di tampilkan.
+
+
+/* Nomor 4 */
+Cara menampilkan detail dari now playing:
+
+Dari halaman rilisan now playingnya, saya membuat fungsi yaang akan memanggil
+pelayan (tukang suruh) dimana pada saat halaman now playing ditampilkan,
+setial film saat di klik akan menjalankan fungsi dengan memberikan parameter
+berupa id dari si film dimana fungsi ini akan melakukan routing ke halaman detail.
+
+Di halaman detail, pada url akan ada angka unik berupa id film yang dikirimkan
+oleh user. Id ini akan digunakan untuk menarik API detail filmnya dan ditampilkan.
+
+
+/* Nomor 5 */
+Cara Responsif:
+Saya membuat website ini awalnya dari desain terlebih dahulu, seperti prototipe
+isinya masih full plain html dengan data asal. Yang terpenting disini, saya membuat
+dengan tujuannya 'Mobile First' dimana fungsionalitas dan tampilan untuk ukuran
+leyar yang kecil sangat penting.
+
+Saya pakai bootstrap hanya untuk menampilkan data berupa list yaitu:
+[-] Daftar pengumuman di menu
+[-] Daftar producer pada detail film
+[-] Kartu about me
+Pokoknya yang <li></li>
+Sisanya seperti navbar, daftar rilisan, menu itu saya buat sendiri dengan
+penggunaan '@media' query.
+
+Setelah semua Tampilan beserta tombol yang ada dapat berfungsi dengan baik,
+tahap akhirnya baru saya lakukan pengisian data asli dengan
+menarik dan menggunakan API. Lalu saya Upload ke webhosting deh^^
+
+
+/* http://www.Bifeldy.tk/ */
