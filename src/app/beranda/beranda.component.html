@@ -11,7 +11,7 @@
             <div class="widget widget-bg mb-3 Roboto">
                 <h3 class="widget-header">
                     <span class="widget-more" style="float: right;">
-                        <a routerLink="/pengumuman" style="font-weight: normal; font-size: 15px;">
+                        <a routerLink="/pengumuman" style="font-weight: normal; font-size: 62.5%;">
                             View More
                         </a>
                     </span>
@@ -54,572 +54,650 @@
             <div class="widget widget-bg mb-4 Roboto">
                 <h3 class="widget-header">
                     <span class="widget-more" style="float: right;">
-                        <a routerLink="/rilisan" style="font-weight: normal; font-size: 15px;">
+                        <a routerLink="/rilisan" style="font-weight: normal; font-size: 62.5%;">
                             View More
                         </a>
                     </span>
                     Daftar Rilisan
                 </h3>
                 <div id="rilisanHome" class="widget-content">
-                    <div class="carousel">
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[0].poster_path}}" alt="{{rilisanData.results[0].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[0].id}}">
-                                            <strong>{{rilisanData.results[0].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[0].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[0].vote_count }}
-                                            </span>
+                    <div class="widget-topic">
+                        <div class="carousel">
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[0].poster_path}}" alt="{{rilisanData.results[0].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[0].id}}">
+                                                <strong>{{rilisanData.results[0].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[0].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[0].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[0].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[0].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[0].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[1].poster_path}}" alt="{{rilisanData.results[1].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[1].id}}">
-                                            <strong>{{rilisanData.results[1].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[1].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[1].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[1].poster_path}}" alt="{{rilisanData.results[1].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[1].id}}">
+                                                <strong>{{rilisanData.results[1].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[1].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[1].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[1].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[1].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[1].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[2].poster_path}}" alt="{{rilisanData.results[2].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[2].id}}">
-                                            <strong>{{rilisanData.results[2].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[2].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[2].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[2].poster_path}}" alt="{{rilisanData.results[2].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[2].id}}">
+                                                <strong>{{rilisanData.results[2].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[2].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[2].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[2].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[2].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[2].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[3].poster_path}}" alt="{{rilisanData.results[3].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[3].id}}">
-                                            <strong>{{rilisanData.results[3].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[3].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[3].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[3].poster_path}}" alt="{{rilisanData.results[3].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[3].id}}">
+                                                <strong>{{rilisanData.results[3].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[3].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[3].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[3].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[3].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[3].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[4].poster_path}}" alt="{{rilisanData.results[4].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[4].id}}">
-                                            <strong>{{rilisanData.results[4].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[4].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[4].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[4].poster_path}}" alt="{{rilisanData.results[4].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[4].id}}">
+                                                <strong>{{rilisanData.results[4].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[4].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[4].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[4].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[4].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[4].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[5].poster_path}}" alt="{{rilisanData.results[5].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[5].id}}">
-                                            <strong>{{rilisanData.results[5].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[5].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[5].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[5].poster_path}}" alt="{{rilisanData.results[5].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[5].id}}">
+                                                <strong>{{rilisanData.results[5].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[5].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[5].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[5].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[5].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[5].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[6].poster_path}}" alt="{{rilisanData.results[6].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[6].id}}">
-                                            <strong>{{rilisanData.results[6].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[6].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[6].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[6].poster_path}}" alt="{{rilisanData.results[6].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[6].id}}">
+                                                <strong>{{rilisanData.results[6].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[6].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[6].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[6].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[6].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[6].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[7].poster_path}}" alt="{{rilisanData.results[7].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[7].id}}">
-                                            <strong>{{rilisanData.results[7].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[7].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[7].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[7].poster_path}}" alt="{{rilisanData.results[7].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[7].id}}">
+                                                <strong>{{rilisanData.results[7].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[7].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[7].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[7].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[7].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[7].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[8].poster_path}}" alt="{{rilisanData.results[8].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[8].id}}">
-                                            <strong>{{rilisanData.results[8].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[8].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[8].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[8].poster_path}}" alt="{{rilisanData.results[8].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[8].id}}">
+                                                <strong>{{rilisanData.results[8].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[8].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[8].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[8].vote_count }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[8].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[9].poster_path}}" alt="{{rilisanData.results[9].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[9].id}}">
-                                            <strong>{{rilisanData.results[9].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[9].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[9].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[9].poster_path}}" alt="{{rilisanData.results[9].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[9].id}}">
+                                                <strong>{{rilisanData.results[9].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[9].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[9].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[9].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[9].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[9].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[10].poster_path}}" alt="{{rilisanData.results[10].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[10].id}}">
-                                            <strong>{{rilisanData.results[10].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[10].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[10].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[10].poster_path}}" alt="{{rilisanData.results[10].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[10].id}}">
+                                                <strong>{{rilisanData.results[10].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[10].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[10].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[10].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[10].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[10].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[11].poster_path}}" alt="{{rilisanData.results[11].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[11].id}}">
-                                            <strong>{{rilisanData.results[11].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[11].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[11].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[11].poster_path}}" alt="{{rilisanData.results[11].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[11].id}}">
+                                                <strong>{{rilisanData.results[11].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[11].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[11].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[11].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[11].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[11].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[12].poster_path}}" alt="{{rilisanData.results[12].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[12].id}}">
-                                            <strong>{{rilisanData.results[12].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[12].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[12].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[12].poster_path}}" alt="{{rilisanData.results[12].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[12].id}}">
+                                                <strong>{{rilisanData.results[12].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[12].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[12].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[12].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[12].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[12].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[13].poster_path}}" alt="{{rilisanData.results[13].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[13].id}}">
-                                            <strong>{{rilisanData.results[13].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[13].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[13].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[13].poster_path}}" alt="{{rilisanData.results[13].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[13].id}}">
+                                                <strong>{{rilisanData.results[13].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[13].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[13].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[13].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[13].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[13].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[14].poster_path}}" alt="{{rilisanData.results[14].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[14].id}}">
-                                            <strong>{{rilisanData.results[14].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[14].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[14].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[14].poster_path}}" alt="{{rilisanData.results[14].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[14].id}}">
+                                                <strong>{{rilisanData.results[14].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[14].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[14].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[14].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[14].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[14].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[15].poster_path}}" alt="{{rilisanData.results[15].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[15].id}}">
-                                            <strong>{{rilisanData.results[15].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[15].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[15].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[15].poster_path}}" alt="{{rilisanData.results[15].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[15].id}}">
+                                                <strong>{{rilisanData.results[15].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[15].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[15].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[15].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[15].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[15].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[16].poster_path}}" alt="{{rilisanData.results[16].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[16].id}}">
-                                            <strong>{{rilisanData.results[16].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[16].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[16].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[16].poster_path}}" alt="{{rilisanData.results[16].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[16].id}}">
+                                                <strong>{{rilisanData.results[16].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[16].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[16].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[16].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[16].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[16].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[17].poster_path}}" alt="{{rilisanData.results[17].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[17].id}}">
-                                            <strong>{{rilisanData.results[17].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[17].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[17].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[17].poster_path}}" alt="{{rilisanData.results[17].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[17].id}}">
+                                                <strong>{{rilisanData.results[17].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[17].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[17].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[17].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[17].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[17].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[18].poster_path}}" alt="{{rilisanData.results[18].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[18].id}}">
-                                            <strong>{{rilisanData.results[18].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[18].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[18].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[18].poster_path}}" alt="{{rilisanData.results[18].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[18].id}}">
+                                                <strong>{{rilisanData.results[18].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[18].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[18].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[18].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[18].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[18].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-cell">
-                            <div class="card">
-                                <img class="card-img-top" src="{{rilisanData.results[19].poster_path}}" alt="{{rilisanData.results[19].title}}" />
-                                <div class="card-body" style="padding: 5px 10px;">
-                                    <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
-                                        <a routerLink="/detail/{{rilisanData.results[19].id}}">
-                                            <strong>{{rilisanData.results[19].original_title}}</strong>
-                                        </a>
-                                        <br />
-                                        <span class="widget-creator">
-                                            <span class="score" title="Skor">
-                                                <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[19].vote_average }}
-                                            </span>
-                                            <span class="member fl-r" title="Jumlah Voting">
-                                                <i class="fa fa-users" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[19].vote_count }}
-                                            </span>
+                            <div class="carousel-cell">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{rilisanData.results[19].poster_path}}" alt="{{rilisanData.results[19].title}}" />
+                                    <div class="card-body" style="padding: 5px 10px;">
+                                        <div class="mt-0 mb-1 widget-creator" style="font-size: 14px;">
+                                            <a routerLink="/detail/{{rilisanData.results[19].id}}">
+                                                <strong>{{rilisanData.results[19].original_title}}</strong>
+                                            </a>
                                             <br />
-                                            <span class="remain-time" title="Tanggal Rilis">
-                                                <i class="fa fa-calendar" style="margin-left: 5px;"></i>
-                                                {{ rilisanData.results[19].release_date }}
+                                            <span class="widget-creator">
+                                                <span class="score" title="Skor">
+                                                    <i class="fa fa-star-half-full" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[19].vote_average }}
+                                                </span>
+                                                <span class="member fl-r" title="Jumlah Voting">
+                                                    <i class="fa fa-users" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[19].vote_count }}
+                                                </span>
+                                                <span class="popular" title="Popularitas">
+                                                    <i class="fa fa-child" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[19].popularity | number:'1.2-2' }}
+                                                </span>
+                                                <br />
+                                                <span class="remain-time" title="Tanggal Rilis">
+                                                    <i class="fa fa-calendar" style="margin-left: 5px;"></i>
+                                                    {{ rilisanData.results[19].release_date }}
+                                                </span>
                                             </span>
-                                        </span>
-                                    </div>
-                                </div>  
+                                        </div>
+                                    </div>  
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -628,16 +706,13 @@
 
             <!-- Latest Post -->
             <div class="widget widget-bg mb-3 Nunito">
-                <h3 class="widget-header">
-                    Jejak Peninggalan
-                </h3>
                 <disqus [identifier]="'/'"></disqus>
             </div>
 
         </div>
 
         <!-- Kolom Kanan -->
-        <div class="col-sm-12 col-md-5 col-lg-4">
+        <div class="d-none d-md-block col-md-5 col-lg-4">
 
             <!-- Advertisement -->
             <div class="gambar mb-3">
@@ -690,10 +765,7 @@
 
             <!-- Discord -->
             <div class="widget widget-bg mb-3 NanumPenScript">
-                <h3 class="widget-header">
-                    Join Our Discord Chat Now!
-                </h3>
-                <iframe src="https://discordapp.com/widget?id=342220398022098944&theme=dark" height="450" allowtransparency="true" frameborder="0"></iframe>
+                <iframe src="https://discordapp.com/widget?id=342220398022098944&theme=dark" height="375" allowtransparency="true" frameborder="0"></iframe>
             </div>
 
         </div>

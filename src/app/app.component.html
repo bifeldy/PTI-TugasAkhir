@@ -3,7 +3,7 @@
 
     <!-- Topnav Menu Atas, Mobile/Tablets -->
     <nav class="navbar fixed-top shadow" style="background-color: #2e51a2;">
-        <a class="navbar-brand bifeldy-logo" routerLink="/" style="color: whitesmoke;" title="Misty Chronexial">
+        <a id="homeButton" class="navbar-brand bifeldy-logo" routerLink="/" style="color: whitesmoke;" title="Misty Chronexial">
             <img src="/favicon.ico" alt="Home" height="30" />
             <b>&nbsp; Bifeldy</b>
         </a>
@@ -38,8 +38,8 @@
                     <i class="fa fa-search"></i>
                 </button>
             </form>
-        </div>
-
+        </div>        
+        <div class="clearfix"> &nbsp; </div>
         <a *ngIf="currentUser != null && currentUser != undefined; then sudahLogin; else belumLogin;"></a>
         <ng-template #sudahLogin>
             <a routerLink="/profil" routerLinkActive="bifeldy-active">
@@ -124,19 +124,19 @@
 
 <!-- Footer -->
 <footer>
-    <div class="gitHub ShadowsIntoLight d-none d-md-block" style="float: right;">
+    <div class="gitHub ShadowsIntoLight d-none d-md-block" style="float: right; font-size: 12px;">
         <a href="https://github.com/bifeldy/PTI-TugasAkhir" title="Github Latest Master Commit">
             <i class="fa fa-fw fa-code-fork"></i>
             {{ githubLastCommit.sha | slice: 0:8 }}
         </a>
         &nbsp;
     </div>
-    <div class="ShadowsIntoLight" style="float: left;">
+    <div class="bifeldy-footer ShadowsIntoLight" style="float: left; font-size: 12px;">
         &nbsp;
         <span class="copyleft">
             <font color="#20ff6b">&copy; </font>
-        </span>
-        <font color="#ffffff">2012 </font>
+        </span> 
+        <font color="#ffffff"> 2012 </font>
         <font color="#00FFFF">All-Wrong </font>
         <font color="#fbce78">UnReserved. </font>
         <font color="#000000">|| </font>

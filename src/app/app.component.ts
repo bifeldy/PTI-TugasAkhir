@@ -49,10 +49,17 @@ export class AppComponent {
       }
     );
     this._pelayanService.loadScriptTEXT(`
-      let sidebarMenuClick = document.getElementById('navbar');
-      let sidebarMenu = document.getElementById('navbar').getElementsByTagName('a');
-      sidebarMenuClick.addEventListener("click", event => {
-        if(window.innerWidth <= 768 || window.OuterWidth <= 768) {
+      let sidebarMenuClick = document.getElementById('navbar').getElementsByTagName('a');
+      for(let i=0; i<sidebarMenuClick.length; i++){
+        sidebarMenuClick[i].addEventListener("click", event => {
+          if(window.innerWidth <= 768 || window.OuterWidth <= 768) {
+            mobileShowHide();
+          }
+        }, false);
+      }
+      let homeButton = document.getElementById('homeButton');
+      homeButton.addEventListener("click", event => {
+        if((window.innerWidth <= 768 || window.OuterWidth <= 768) && navbarOpen) {
           mobileShowHide();
         }
       }, false);

@@ -546,7 +546,7 @@ footer {
     border-style: solid;
     border-width: 0 0 1px;
     color: #008022;
-    font-size: 25px;
+    font-size: 125%;
     font-weight: 700;
     margin: 0;
     padding: 3px 0;
@@ -554,7 +554,7 @@ footer {
 
 .widget-content{
     padding: 0 10px;
-    font-size: 20px;
+    font-size: 100%;
 }
 
 .widget-topic {
@@ -562,7 +562,7 @@ footer {
     border-style: solid;
     border-width: 0 0 1px;
     padding: 3px;
-    font-size: 16px;
+    font-size: 100%;
     margin-top: 15px;
 }
 
@@ -572,7 +572,7 @@ footer {
 
 .widget-creator {
     color: #661700;
-    font-size: 14px;
+    font-size: 87.5%;
 }
 
 .widget-topic a,
@@ -585,14 +585,13 @@ footer {
 .media-body a:visited {
     color: #1d439b;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 100%;
 }
-
 .gitHub a,
 .gitHub a:visited {
     color: #20ff6b;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 .widget-topic a:hover,

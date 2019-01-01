@@ -35,6 +35,17 @@ function windowResize() {
         Delay = 125;
     }
 
+    let SynopsisRilisan = document.getElementsByClassName("synopsis");
+    let GambarRilisan = document.getElementsByClassName("image");
+    let RilisanContent = document.getElementsByClassName("rilisan-content");
+    if(SynopsisRilisan != undefined && GambarRilisan != undefined) {
+        for(let i=0; i< SynopsisRilisan.length; i++){
+            RilisanContent[i].setAttribute("style", "height: " + GambarRilisan[i].clientHeight + "px;");
+            SynopsisRilisan[i].setAttribute("style", "height: " + GambarRilisan[i].clientHeight + "px;");
+            console.log("Bias");
+        }
+    }
+
 }
 
 /** Ambil Parameter Dari URL */

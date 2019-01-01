@@ -2,7 +2,7 @@
 
 .carousel-cell {
     width: 150px;
-    height: 400px;
+    height: 375px;
     margin-right: 10px;
     border-radius: 5px;
     counter-increment: gallery-cell;
@@ -16,6 +16,5 @@
     display: block;
     text-align: center;
     line-height: 200px;
-    font-size: 80px;
     color: white;
 }

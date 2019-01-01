@@ -9,7 +9,7 @@
             <h3 class="widget-header">
                 <span class="widget-more" style="float: right;">
                     <nav aria-label="Page navigation example">
-                        <ul class="pagination pagination-sm">
+                        <ul class="pagination pagination-sm" style="margin-bottom: 0;">
                             <li class="page-item">
                                 <a class="page-link" (click)="rilisanPreviousPage()" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>
@@ -60,17 +60,19 @@
                             </ng-template>
                         </div>
                     </div>
-                    <div class="image">
-                        <img width="167" height="242" alt="{{ data.original_title | slice: 0:20 }}" src="{{data.poster_path}}" />
-                    </div>
-                    <div class="synopsis js-synopsis" style="width: 160px;">
-                        <span class="preline" *ngIf="data.overview == null || data.overview == undefine || data.overview == ''; then tidakAdaSinopsis; else adaSinopsis;"></span>
-                        <ng-template #tidakAdaSinopsis>
-                            <span class="preline">Whoa~ Tidak Ada Sinopsis Yang Tersedia.</span>
-                        </ng-template>
-                        <ng-template #adaSinopsis>
-                            <span class="preline">{{ data.overview }}</span>
-                        </ng-template>
+                    <div class="rilisan-content">
+                        <div class="image">
+                            <img width="100%" alt="{{ data.original_title | slice: 0:20 }}" src="{{data.poster_path}}" />
+                        </div>
+                        <div class="synopsis js-synopsis">
+                            <span class="preline" *ngIf="data.overview == null || data.overview == undefine || data.overview == ''; then tidakAdaSinopsis; else adaSinopsis;"></span>
+                            <ng-template #tidakAdaSinopsis>
+                                <span class="preline">Whoa~ Tidak Ada Sinopsis Yang Tersedia.</span>
+                            </ng-template>
+                            <ng-template #adaSinopsis>
+                                <span class="preline">{{ data.overview }}</span>
+                            </ng-template>
+                        </div>
                     </div>
                     <div class="information">
                         <div class="info" title="Tipe">
