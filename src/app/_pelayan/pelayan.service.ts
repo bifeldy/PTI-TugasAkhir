@@ -21,13 +21,13 @@ export class PelayanService {
   
   private TMDbAPIKey: string = "2c864ba983acc179387f55e736decaf9";
   private APIReadAccessTokenV4: string = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYzg2NGJhOTgzYWNjMTc5Mzg3ZjU1ZTczNmRlY2FmOSIsInN1YiI6IjViZjRmNjg1YzNhMzY4MThhMzBiOWNkNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fJLY67P3_yC-C1cDvjEttNEYhPVTZf4BraM-lKDP2Vo";
-  private pengumumanHome: string = "/assets/json/pengumuman.json";
+  private pengumumanHome: string = "assets/json/pengumuman.json";
   private rilisanHome: string = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + this.TMDbAPIKey + "&language=en-US&page=";
   private popularHome: string = "https://api.themoviedb.org/3/movie/popular?api_key=" + this.TMDbAPIKey + "&language=en-US&page=";
   private rilisanDetail: string = "https://api.themoviedb.org/3/movie/";
   private genres = "https://api.themoviedb.org/3/genre/movie/list?api_key=" + this.TMDbAPIKey;
   private githubAPI = "https://api.github.com/repos/bifeldy/PTI-TugasAkhir/commits/master";
-  private Tentang = "/assets/json/tentang.json";
+  private Tentang = "assets/json/tentang.json";
 
   constructor(
     private _http: HttpClient,
