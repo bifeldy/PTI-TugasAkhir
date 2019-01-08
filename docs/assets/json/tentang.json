@@ -1,0 +1,54 @@
+{
+    "sekilasInfo": "Sebuah website yang dibuat sebagai tugas akhir mata kuliah 'Pengantar Teknologi Internet'.\nMata Kuliah Ini Bersifat Front-End Saja (Tanpa Back-End) A..Aye..Ayee~ (>_<\")\n\nLampiran Link Yang Digunakan:\n[-] https://www.youtube.com/playlist?list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ\n[-] https://github.com/angular/angular/issues/7781\n[-] https://medium.com/codingthesmartway-com-blog/using-bootstrap-with-angular-c83c3cee3f4a\n[-] http://jasonwatmore.com/post/2018/10/29/angular-7-user-registration-and-login-example-tutorial\n\nRiwayat CLI:\n$ npm install -g @angular/cli\n$ ng new PTI-TugasAkhir\n$ cd PTI-TugasAkhir\n$ npm install [package]\n$ ng generate component [view]\n$ ng generate service [service]\n$ ng generate guard [guard]\n$ ng serve --open\n$ ng build --prod\n$ cd dist/PTI-TugasAkhir\n\nWebHosting .htaccess Configuration:\nRewriteEngine On\n&nbsp; &nbsp; &nbsp; &nbsp; # If an existing asset or directory is requested go to it as it is\n&nbsp; &nbsp; &nbsp; &nbsp; RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]\n&nbsp; &nbsp; &nbsp; &nbsp; RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d\n&nbsp; &nbsp; &nbsp; &nbsp; RewriteRule ^ - [L]\n# If the requested resource doesn't exist, use index.html\nRewriteRule ^ /index.html",
+    "library": [
+        {
+            "id": 1,
+            "img": "/assets/img/tentang/nodeJS.jpg",
+            "title": "NodeJS v11.3",
+            "content": "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+            "url": "https://nodejs.org/"
+        },
+        {
+            "id": 2,
+            "img": "https://angular.io/assets/images/logos/angular/angular.svg",
+            "title": "Angular v7.1.1",
+            "content": "One framework. Mobile & desktop.",
+            "url": "https://angular.io/"
+        },
+        {
+            "id": 3,
+            "img": "https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg",
+            "title": "Bootstrap v4.1",
+            "content": "Build responsive, mobile-first projects on the web with the world's most popular front-end component library.",
+            "url": "https://getbootstrap.com/"
+        },
+        {
+            "id": 4,
+            "img": "/assets/img/tentang/jquery_logo.jpg",
+            "title": "jQuery v3.3.1",
+            "content": "Write less, do more.",
+            "url": "https://jquery.com"
+        },
+        {
+            "id": 5,
+            "img": "https://rxjs-dev.firebaseapp.com/generated/images/marketing/home/Rx_Logo-512-512.png",
+            "title": "RxJs v6.0",
+            "content": "Reactive Extensions Library for JavaScript",
+            "url": "https://rxjs-dev.firebaseapp.com"
+        },
+        {
+            "id": 6,
+            "img": "https://flickity.metafizzy.co/img/flickity-illustration.gif",
+            "title": "Flickity v2.1",
+            "content": "Touch, responsive, flickable carousels",
+            "url": "https://flickity.metafizzy.co/"
+        },
+        {
+            "id": 7,
+            "img": "/assets/img/diskusi/disqus.png",
+            "title": "Disqus v2.4.3",
+            "content": "The #1 way to build an audience on your website.",
+            "url": "https://disqus.com/"
+        }
+    ]
+}
