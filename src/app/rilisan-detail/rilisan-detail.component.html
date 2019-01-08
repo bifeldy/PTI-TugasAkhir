@@ -21,7 +21,7 @@
                 <span class="close-button">&times;</span>
                 <div *ngIf="detailData.poster_path == null || detailData.poster_path == ''; then posterKosong; else posterAda;"></div>
                 <ng-template #posterKosong>
-                        <img src="/assets/img/404.gif" alt="Aw~ Gambar Poster Tidak Ada." />
+                        <img src="assets/img/404.gif" alt="Aw~ Gambar Poster Tidak Ada." />
                 </ng-template>
                 <ng-template #posterAda>
                     <img src="{{detailData.poster_path}}" alt="{{ detailData.original_title | slice: 0:20 }}" />
