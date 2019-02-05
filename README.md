@@ -16,7 +16,7 @@
 
 ## Tentang Tugas
 
-Tempat Sharing File-File Gitu Deh ...
+Tempat Sharing Gitu Deh ...
 
 <br />
 
@@ -45,7 +45,7 @@ RewriteRule ^ /index.html
 
 ```sh
 $ ng build --prod
-$ cd dist/TugasAkhir
+$ cd dist/PTI-TugasAkhir
 ```
 Upload All File To *public_html* And Make Sure Same Directory With *.htaccess*
 
